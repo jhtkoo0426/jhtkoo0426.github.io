@@ -1,0 +1,111 @@
+// Styling for App.js
+$white: #FFF;
+$grey: #F9F9F9;
+$black: #141414;
+$semidark-grey: #585858;
+$dark-grey: #363636;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+:root {
+    // Colour variables
+    --white: #{$white};
+    --black: #{$black};
+    --grey: #{$grey};
+    --semidark-grey: #{$semidark-grey};
+    --dark-grey: #{$dark-grey};
+    
+    // Navbar variables
+    --topnav-992plus-height: 15vh;
+
+    // Other constants
+    line-height: 140%;
+    background-color: var(--grey);
+    ::-webkit-scrollbar { display: none; }  // Hide scrollbar
+}
+
+
+// Webfonts
+@font-face {
+    font-family: 'InterReg';
+    src: url("../fonts/Inter/static/Inter-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'InterBold';
+    src: url("../fonts/Inter/static/Inter-Bold.ttf");
+}
+
+@font-face {
+    font-family: 'Averta';
+    src: url("../fonts/Averta/averta-regular.otf");
+}
+
+@font-face {
+    font-family: 'AvertaBold';
+    src: url("../fonts/Averta/averta-bold.otf");
+}
+
+@font-face {
+    font-family: 'Playfair';
+    src: url("../fonts/Playfair/static/PlayfairDisplay-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'PlayfairBold';
+    src: url("../fonts/Playfair/static/PlayfairDisplay-Bold.ttf");
+}
+
+
+// Default styling for anchor and text elements
+a, p {
+    line-height: 200%;
+    font-size: 16px;
+    font-family: 'Inter';
+}
+
+
+// Splash screen animation
+.splash-screen {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: splash_screen_fadeOut ease;
+    animation-duration: 3s;
+    animation-delay: 3s;
+}
+
+
+// Handling mobile responsiveness
+// Large Devices, Wide Screens
+@media only screen and (max-width: 1200px) {}
+
+// Medium Devices, Desktops
+@media only screen and (max-width: 992px) { }
+
+// Small Devices, Tablets
+@media only screen and (max-width: 768px) {
+    a, p {
+        font-size: 14px;
+    }
+}
+
+// Extra Small Devices, Phones 
+@media only screen and (max-width: 480px) {
+    a, p {
+        font-size: 12px;
+    }
+}
+
+// Custom, iPhone Retina
+@media only screen and (max-width : 320px) {}
