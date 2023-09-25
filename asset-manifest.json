@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9ff6ea16.css",
+    "main.js": "/static/js/main.c8adb3b5.js",
+    "static/js/787.c1112931.chunk.js": "/static/js/787.c1112931.chunk.js",
+    "static/media/averta-bold.otf": "/static/media/averta-bold.ab424798bac0c7bedeea.otf",
+    "static/media/Inter-Bold.ttf": "/static/media/Inter-Bold.a73db89c43e44ca8f5e0.ttf",
+    "static/media/Inter-Regular.ttf": "/static/media/Inter-Regular.2391725004ae05a27e8e.ttf",
+    "static/media/PlayfairDisplay-Bold.ttf": "/static/media/PlayfairDisplay-Bold.c3c9165182044bf7f179.ttf",
+    "static/media/PlayfairDisplay-Regular.ttf": "/static/media/PlayfairDisplay-Regular.6a97b5c64f316f567fa1.ttf",
+    "static/media/averta-regular.otf": "/static/media/averta-regular.a298a0ac59f09aeb64eb.otf",
+    "index.html": "/index.html",
+    "main.9ff6ea16.css.map": "/static/css/main.9ff6ea16.css.map",
+    "main.c8adb3b5.js.map": "/static/js/main.c8adb3b5.js.map",
+    "787.c1112931.chunk.js.map": "/static/js/787.c1112931.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9ff6ea16.css",
+    "static/js/main.c8adb3b5.js"
+  ]
+}
