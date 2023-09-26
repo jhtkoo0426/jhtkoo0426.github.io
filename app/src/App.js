@@ -6,12 +6,14 @@ import React, { useRef, useState, useEffect } from "react";
 import Home from "./pages/Home";
 import Layout from "./pages/Layout";
 import Work from "./pages/Work";
+import UCLdiss from "./pages/work_pages/UCLdiss";
 
 // General App & pages SCSS
 import "../src/css/app.scss";
 import "../src/css/home.scss";
 import "../src/css/layout.scss";
 import "../src/css/work.scss";
+import "../src/css/ucldiss.scss";
 
 // Component SCSS
 import "../src/css/anchor.scss";
@@ -27,6 +29,7 @@ const AppRoute = () => {
       <Route path="/" element={<Layout/>}>
         <Route path="/" index element={<Home/>} />
         <Route path="/work" element={<Work/>} />
+        <Route path="/ucl" element={<UCLdiss/>} />
       </Route>
     </Routes>
   );

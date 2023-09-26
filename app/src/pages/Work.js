@@ -25,8 +25,8 @@ const Work = () => {
                     tags={["Data Visualization", "Web Development (Django)", "NLP"]}>
                 </WorkLink>
                 <WorkLink
-                    name="UCL dissertation" num={2} href={"https://github.com/jhtkoo0426/UCL-FYP"}
-                    description="teaching a robotic arm to grab unseen objects" external={true}
+                    name="UCL dissertation" num={2} href={"/ucl"}
+                    description="teaching a robotic arm to grab unseen objects" external={false}
                     tags={["Robotics", "Machine Learning", "Simulation"]}>
                 </WorkLink>
                 <WorkLink

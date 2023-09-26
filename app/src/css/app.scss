@@ -67,10 +67,14 @@ $dark-grey: #363636;
 
 
 // Default styling for anchor and text elements
-a, p {
+a, p, ul, li {
     line-height: 200%;
     font-size: 16px;
     font-family: 'Inter';
+}
+
+ul {
+    padding-left: 30px;
 }
 
 

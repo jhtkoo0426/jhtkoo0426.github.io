@@ -12,17 +12,17 @@
 
     &.standard {
         font-size: calc(var(--title-992plus-huge) - 1rem);
-        line-height: calc(var(--title-992plus-huge) - 1rem);
+        line-height: calc(var(--title-992plus-huge) - 0.5rem);
     }
 
     &.small {
         font-size: calc(var(--title-992plus-huge) - 2rem);
-        line-height: calc(var(--title-992plus-huge) - 2rem);
+        line-height: calc(var(--title-992plus-huge) - 1.5rem);
     }
 
     &.tiny {
         font-size: calc(var(--title-992plus-huge) - 3.5rem);
-        line-height: calc(var(--title-992plus-huge) - 3.5rem);
+        line-height: calc(var(--title-992plus-huge) - 3rem);
     }
 
     &.transparent {
