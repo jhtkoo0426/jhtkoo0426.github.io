@@ -30,7 +30,25 @@ $dark-grey: #363636;
     // Other constants
     line-height: 140%;
     background-color: var(--grey);
-    ::-webkit-scrollbar { display: none; }  // Hide scrollbar
+}
+
+
+// Scrollbar
+::-webkit-scrollbar {
+    width: 14px;
+    background-color: transparent;
+}
+  
+::-webkit-scrollbar-track {
+    border: solid 3px transparent;
+    background: var(--grey);
+}
+  
+::-webkit-scrollbar-thumb {
+    background-color: var(--dark-grey);
+    border-radius: 10px;
+    border: solid 3px transparent;
+    background-clip: content-box;
 }
 
 
