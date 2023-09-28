@@ -29,6 +29,34 @@
             display: grid;
             grid-template-columns: 60% 35%;
             grid-column-gap: 5%;
+            align-items: center;
+
+            .landing-intro > #landing-work-link {
+                display: flex;
+                align-items: center;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                text-decoration: none;
+                font-family: 'Inter';
+                font-size: 14px;
+                color: var(--black);
+
+                span {
+                    display: block;
+                    height: 1px;
+                    margin-left: 10px;
+                    background-color: var(--black);
+                    width: 0.92%;
+                    transition: width 1s;
+                }
+
+                &:hover span {
+                    width: 10%;
+                    transition: .5s;
+                }
+            }
+
+            .landing-art > img { width: 100%; }
         }
     }
 

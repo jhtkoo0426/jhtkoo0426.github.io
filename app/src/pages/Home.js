@@ -1,6 +1,8 @@
 import Anchor from "../components/Anchor";
 import Title from "../components/Title";
 
+import julius from "../media/julius.png";
+
 
 const Home = () => {
     return (
@@ -17,11 +19,11 @@ const Home = () => {
                         foundation in data, based in the UK.</p>
                         <br></br>
                         <Anchor id="landing-work-link" underline={false} href="/work">
-                            <p>SEE MY WORKS</p>
+                            see my works<span></span>
                         </Anchor>
                     </div>
                     <div className="landing-art">
-                        Test
+                        <img src={julius} alt=""></img>
                     </div>
                 </div>
             </div>
