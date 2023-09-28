@@ -1,17 +1,17 @@
 // Page for UCL dissertation project showcase
-import Anchor from "../../components/Anchor"
-import Title from "../../components/Title"
+import Anchor from "../components/Anchor"
+import Title from "../components/Title"
 
 // Import media and videos
-import ucl_diss_pic1 from "../../media/ucldiss1.png";
-import ucl_diss_pic2 from "../../media/ucldiss2.png";
-import ucl_diss_pic3 from "../../media/ucldiss3.png";
-import ucl_diss_pic4 from "../../media/ucldiss4.png";
-import ucl_diss_pic5 from "../../media/ucldiss5.png";
-import ucl_diss_pic6 from "../../media/ucldiss6.png";
-import ucl_diss_pic7 from "../../media/ucldiss7.png";
-import ucl_diss_pic8 from "../../media/ucldiss8.png";
-import ucl_diss_vid from "../../videos/dissertation-demo.mp4";
+import ucl_diss_pic1 from "../media/ucldiss1.png";
+import ucl_diss_pic2 from "../media/ucldiss2.png";
+import ucl_diss_pic3 from "../media/ucldiss3.png";
+import ucl_diss_pic4 from "../media/ucldiss4.png";
+import ucl_diss_pic5 from "../media/ucldiss5.png";
+import ucl_diss_pic6 from "../media/ucldiss6.png";
+import ucl_diss_pic7 from "../media/ucldiss7.png";
+import ucl_diss_pic8 from "../media/ucldiss8.png";
+import ucl_diss_vid from "../videos/dissertation-demo.mp4";
 
 
 const UCLdiss = () => {

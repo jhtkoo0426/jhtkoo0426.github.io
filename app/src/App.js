@@ -6,7 +6,8 @@ import React, { useRef, useState, useEffect } from "react";
 import Home from "./pages/Home";
 import Layout from "./pages/Layout";
 import Work from "./pages/Work";
-import UCLdiss from "./pages/work_pages/UCLdiss";
+import UCLdiss from "./pages/UCLdiss";
+import ScrollToTop from "./components/ScrollToTop";
 
 // General App & pages SCSS
 import "../src/css/app.scss";
@@ -44,9 +45,10 @@ export default function App() {
       setIsLoading(false);
     }, 100);
   }, []);
-
+  
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <AppRoute />
     </BrowserRouter>
   )

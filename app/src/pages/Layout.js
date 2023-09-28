@@ -11,7 +11,6 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 
 const Layout = () => {
-
     return (
       <>
         {/* Top navigation bar */}
