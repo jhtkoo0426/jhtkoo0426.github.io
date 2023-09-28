@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Outlet, Link, NavLink } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
 
 import Anchor from "../components/Anchor";
 import Cursor from "../components/Cursor";
@@ -14,7 +15,7 @@ const Layout = () => {
     return (
       <>
         {/* Top navigation bar */}
-        <nav className="topnav-container">
+        <motion.nav className="topnav-container" initial={{ opacity: 0, y: -50}} animate={{ opacity: 1, y: 0, transition: { delay: 0.25} }}>
           <div className="home-button">
             <Link to={"/"}>
               <p className="name">j.</p>
@@ -25,7 +26,7 @@ const Layout = () => {
             <NavLink className="topnav-link anchor underline" activeclassname="active" to="/work">work</NavLink>
             <NavLink className="topnav-link anchor underline" activeclassname="active" to="/files/Justin_Koo_Resume_Aug23.pdf" target="_blank" download>Résumé</NavLink>
           </div>
-        </nav>
+        </motion.nav>
 
         <nav className="sidenav-container">
           <p>SCROLL DOWN</p>

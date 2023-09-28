@@ -1,5 +1,6 @@
 import { BrowserRouter, HashRouter, Routes, Route } from "react-router-dom";
 import React, { useRef, useState, useEffect } from "react";
+import { AnimatePresence } from "framer-motion";
 
 
 // Pages
@@ -38,18 +39,12 @@ const AppRoute = () => {
 
 // Main Function
 export default function App() {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 100);
-  }, []);
-  
   return (
-    <BrowserRouter>
-      <ScrollToTop />
-      <AppRoute />
-    </BrowserRouter>
+    <AnimatePresence>
+      <BrowserRouter>
+        <ScrollToTop />
+        <AppRoute />
+      </BrowserRouter>
+    </AnimatePresence>
   )
 }

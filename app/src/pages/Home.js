@@ -1,10 +1,25 @@
 import Anchor from "../components/Anchor";
 import Title from "../components/Title";
+import { AnimatePresence, motion } from "framer-motion";
 
 import julius from "../media/julius.png";
 
 
 const Home = () => {
+    // Animating elements
+    const variants = {
+        text: {
+            visible: { opacity: 1, x: 0 },
+            hidden: { opacity: 0, x: -200 }, 
+            transition: { delay: 0.25}
+        },
+        julius: {
+            visible: { opacity: 1, x: 0 },
+            hidden: { opacity: 0, x: 200 }, 
+            transition: { delay: 0.25, duration: 5}
+        }
+    }
+
     return (
         <div className="home-container">
             {/* Section 01 - Landing */}
@@ -13,17 +28,17 @@ const Home = () => {
                 <div className="background"></div>
                 <div className="landing-content">
                     <div className="landing-intro">
-                        <Title size={"huge"}>an analytical mind who explores</Title>
+                        <Title animated={true} size={"huge"}>an analytical mind who explores</Title>
                         <br></br><br></br>
-                        <p>Hi! I'm Justin, a Computer Science Graduate architecting the future with a
-                        foundation in data, based in the UK.</p>
+                        <motion.p initial="hidden" animate="visible" variants={variants.text}>Hi! I'm Justin, a Computer Science Graduate architecting the future with a
+                        foundation in data, based in the UK.</motion.p>
                         <br></br>
                         <Anchor id="landing-work-link" underline={false} href="/work">
                             see my works<span></span>
                         </Anchor>
                     </div>
                     <div className="landing-art">
-                        <img src={julius} alt=""></img>
+                        <motion.img src={julius} alt="" initial="hidden" animate="visible" variants={variants.julius}></motion.img>
                     </div>
                 </div>
             </div>
