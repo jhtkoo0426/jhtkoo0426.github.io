@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.a84f6f50.css",
-    "main.js": "/static/js/main.b86b9bb6.js",
+    "main.css": "/static/css/main.f44df33b.css",
+    "main.js": "/static/js/main.b61575fa.js",
     "static/js/787.c1112931.chunk.js": "/static/js/787.c1112931.chunk.js",
     "static/media/dissertation-demo.mp4": "/static/media/dissertation-demo.86b6c27ae632c851add1.mp4",
     "static/media/averta-bold.otf": "/static/media/averta-bold.ab424798bac0c7bedeea.otf",
@@ -11,6 +11,7 @@
     "static/media/PlayfairDisplay-Regular.ttf": "/static/media/PlayfairDisplay-Regular.6a97b5c64f316f567fa1.ttf",
     "static/media/ucldiss2.png": "/static/media/ucldiss2.6e87118d9a58480c38d8.png",
     "static/media/averta-regular.otf": "/static/media/averta-regular.a298a0ac59f09aeb64eb.otf",
+    "static/media/julius.png": "/static/media/julius.d1e29071f3cf790118df.png",
     "static/media/ucldiss1.png": "/static/media/ucldiss1.8509d88f2cbe24674698.png",
     "static/media/ucldiss5.png": "/static/media/ucldiss5.5edc5fa3c4337fcd0f0d.png",
     "static/media/ucldiss8.png": "/static/media/ucldiss8.4f71e74355c07a882dde.png",
@@ -19,12 +20,12 @@
     "static/media/ucldiss3.png": "/static/media/ucldiss3.b703fea6eaa31b18d5c6.png",
     "static/media/ucldiss6.png": "/static/media/ucldiss6.889374a94b832726d273.png",
     "index.html": "/index.html",
-    "main.a84f6f50.css.map": "/static/css/main.a84f6f50.css.map",
-    "main.b86b9bb6.js.map": "/static/js/main.b86b9bb6.js.map",
+    "main.f44df33b.css.map": "/static/css/main.f44df33b.css.map",
+    "main.b61575fa.js.map": "/static/js/main.b61575fa.js.map",
     "787.c1112931.chunk.js.map": "/static/js/787.c1112931.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a84f6f50.css",
-    "static/js/main.b86b9bb6.js"
+    "static/css/main.f44df33b.css",
+    "static/js/main.b61575fa.js"
   ]
 }
