@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Outlet, Link, NavLink, useLocation } from "react-router-dom";
-import { HashLink } from 'react-router-hash-link';
+import { Outlet, Link, NavLink } from "react-router-dom";
 
 import Anchor from "../components/Anchor";
 import Cursor from "../components/Cursor";
@@ -25,6 +24,7 @@ const Layout = () => {
           <div className="topnav-menu">
             <NavLink className="topnav-link anchor underline" activeclassname="active" to="/">home</NavLink>
             <NavLink className="topnav-link anchor underline" activeclassname="active" to="/work">work</NavLink>
+            <NavLink className="topnav-link anchor underline" activeclassname="active" to="/files/Justin_Koo_Resume_Aug23.pdf" target="_blank" download>Résumé</NavLink>
           </div>
         </nav>
 

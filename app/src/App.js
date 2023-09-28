@@ -46,8 +46,8 @@ export default function App() {
   }, []);
 
   return (
-    <HashRouter>
+    <BrowserRouter>
       <AppRoute />
-    </HashRouter>
+    </BrowserRouter>
   )
 }
