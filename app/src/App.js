@@ -1,6 +1,5 @@
-import { BrowserRouter, HashRouter, Routes, Route } from "react-router-dom";
-import React, { useRef, useState, useEffect } from "react";
-import { AnimatePresence } from "framer-motion";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React from "react";
 
 
 // Pages
@@ -40,11 +39,9 @@ const AppRoute = () => {
 // Main Function
 export default function App() {
   return (
-    <AnimatePresence>
-      <BrowserRouter>
-        <ScrollToTop />
-        <AppRoute />
-      </BrowserRouter>
-    </AnimatePresence>
+    <BrowserRouter>
+      <ScrollToTop />
+      <AppRoute />
+    </BrowserRouter>
   )
 }

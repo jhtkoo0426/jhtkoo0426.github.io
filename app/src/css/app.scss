@@ -97,18 +97,6 @@ ul {
 }
 
 
-// Splash screen animation
-.splash-screen {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: splash_screen_fadeOut ease;
-    animation-duration: 3s;
-    animation-delay: 3s;
-}
-
-
 // Handling mobile responsiveness
 // Large Devices, Wide Screens
 @media only screen and (max-width: 1200px) {}

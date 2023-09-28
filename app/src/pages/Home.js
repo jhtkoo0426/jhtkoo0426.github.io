@@ -1,6 +1,6 @@
 import Anchor from "../components/Anchor";
 import Title from "../components/Title";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 import julius from "../media/julius.png";
 
@@ -21,7 +21,7 @@ const Home = () => {
     }
 
     return (
-        <div className="home-container">
+        <motion.div className="home-container" exit={{ opacity: 0 }}>
             {/* Section 01 - Landing */}
             <div className="landing">
                 {/* Circular background aesthetic */}
@@ -108,7 +108,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 }
 
