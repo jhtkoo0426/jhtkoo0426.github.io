@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.f44df33b.css",
-    "main.js": "/static/js/main.b61575fa.js",
+    "main.css": "/static/css/main.b12ee49e.css",
+    "main.js": "/static/js/main.e3783d88.js",
     "static/js/787.c1112931.chunk.js": "/static/js/787.c1112931.chunk.js",
     "static/media/dissertation-demo.mp4": "/static/media/dissertation-demo.86b6c27ae632c851add1.mp4",
     "static/media/averta-bold.otf": "/static/media/averta-bold.ab424798bac0c7bedeea.otf",
@@ -20,12 +20,12 @@
     "static/media/ucldiss3.png": "/static/media/ucldiss3.b703fea6eaa31b18d5c6.png",
     "static/media/ucldiss6.png": "/static/media/ucldiss6.889374a94b832726d273.png",
     "index.html": "/index.html",
-    "main.f44df33b.css.map": "/static/css/main.f44df33b.css.map",
-    "main.b61575fa.js.map": "/static/js/main.b61575fa.js.map",
+    "main.b12ee49e.css.map": "/static/css/main.b12ee49e.css.map",
+    "main.e3783d88.js.map": "/static/js/main.e3783d88.js.map",
     "787.c1112931.chunk.js.map": "/static/js/787.c1112931.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f44df33b.css",
-    "static/js/main.b61575fa.js"
+    "static/css/main.b12ee49e.css",
+    "static/js/main.e3783d88.js"
   ]
 }
