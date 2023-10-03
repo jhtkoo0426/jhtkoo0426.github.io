@@ -130,6 +130,15 @@
                 padding: 10%;
             }
         }
+
+        .how-i-work, .skillset {
+            width: 100%;
+            grid-template-columns: 1fr;
+            display: grid;
+            padding: 2% 15%;
+    
+            > div { grid-row: 2; grid-column: 1; }
+        }
     }
 }
 

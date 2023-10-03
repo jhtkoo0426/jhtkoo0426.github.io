@@ -1,28 +1,27 @@
 // Styling for Title.js
 .title {
-    --title-992plus-huge: 4.5rem;
     font-family: 'AvertaBold';
     color: var(--dark-grey);
 
     // Varying sizes of titles. Options: huge | Sstandard | small
     &.huge {
-        font-size: var(--title-992plus-huge);
-        line-height: var(--title-992plus-huge);
+        font-size: 4.5rem;
+        line-height: 4.5rem;
     }
 
     &.standard {
-        font-size: calc(var(--title-992plus-huge) - 1rem);
-        line-height: calc(var(--title-992plus-huge) - 0.5rem);
+        font-size: 3.5rem;
+        line-height: 3rem;
     }
 
     &.small {
-        font-size: calc(var(--title-992plus-huge) - 2rem);
-        line-height: calc(var(--title-992plus-huge) - 1.5rem);
+        font-size: 2.5rem;
+        line-height: 2rem;
     }
 
     &.tiny {
-        font-size: calc(var(--title-992plus-huge) - 3.5rem);
-        line-height: calc(var(--title-992plus-huge) - 3rem);
+        font-size: 1rem;
+        line-height: 0.5rem;
     }
 
     &.transparent {
@@ -41,18 +40,35 @@
 @media only screen and (max-width: 1200px) {}
 
 // Medium Devices, Desktops
-@media only screen and (max-width: 992px) {
-}
+@media only screen and (max-width: 992px) {}
 
 // Small Devices, Tablets
-@media only screen and (max-width: 768px) {}
-
-// Extra Small Devices, Phones 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
     .title {
-        --title-992plus-huge: 3rem;
+        &.huge {
+            font-size: 3.5rem;
+            line-height: 3.5rem;
+        }
+    
+        &.standard {
+            font-size: 3rem;
+            line-height: 2.5rem;
+        }
+    
+        &.small {
+            font-size: 2rem;
+            line-height: 1.5rem;
+        }
+    
+        &.tiny {
+            font-size: 1rem;
+            line-height: 0.5rem;
+        }
     }
 }
+
+// Extra Small Devices, Phones 
+@media only screen and (max-width: 480px) {}
 
 // Custom, iPhone Retina
 @media only screen and (max-width : 320px) {}
