@@ -74,7 +74,7 @@ const Home = () => {
                     <br></br><br></br>
                     <div className="tools-container">
                         <div>
-                            <Title size="tiny">Software</Title>
+                            <Title size="tiny">Programming Languages</Title>
                             <br></br>
                             <div>
                                 <p>Python</p>
@@ -91,6 +91,7 @@ const Home = () => {
                                 <p>PyTorch</p>
                                 <p>NumPy</p>
                                 <p>Jupyter</p>
+                                <p>AWS (SageMaker, S3)</p>
                             </div>
                         </div>
                         <div>
