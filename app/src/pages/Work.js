@@ -7,15 +7,6 @@ const Work = () => {
     return (
         <div className="work-container">
             {/* Section 01 - Landing */}
-            <div className="landing">
-                {/* Circular background aesthetic */}
-                <div className="background"></div>
-                <div className="landing-content">
-                    <div className="landing-intro">
-                        <Title size={"huge"}>Works</Title>
-                    </div>
-                </div>
-            </div>
             
             {/* Section 02 - Project gallery */}
             <div className="project-gallery-container">
