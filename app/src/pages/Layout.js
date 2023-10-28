@@ -7,7 +7,7 @@ import Title from "../components/Title";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin, faKaggle } from '@fortawesome/free-brands-svg-icons';
 
 
 
@@ -24,7 +24,7 @@ const Layout = () => {
           <div className="topnav-menu">
             <NavLink className="topnav-link anchor underline" activeclassname="active" to="/">home</NavLink>
             <NavLink className="topnav-link anchor underline" activeclassname="active" to="/work">work</NavLink>
-            <NavLink className="topnav-link anchor underline" activeclassname="active" to="/files/Justin_Koo_Resume_Aug23.pdf" target="_blank" download>Résumé</NavLink>
+            <NavLink className="topnav-link anchor underline" activeclassname="active" to="/files/justin_koo_resume_2023.pdf" target="_blank" download>Résumé</NavLink>
           </div>
         </motion.nav>
 
@@ -50,7 +50,10 @@ const Layout = () => {
               <Anchor target={true} underline={false} href={"https://github.com/jhtkoo0426"}>
                 <FontAwesomeIcon icon={faLinkedin}></FontAwesomeIcon>
               </Anchor>
-              <Anchor className="blob2" href={"mailto:jhtkbusiness@gmail.com"} target={true} underline={false}>
+              <Anchor target={true} underline={false} href={"https://www.kaggle.com/jhtkoo0426"}>
+                <FontAwesomeIcon icon={faKaggle}></FontAwesomeIcon>
+              </Anchor>
+              <Anchor href={"mailto:jhtkbusiness@gmail.com"} target={true} underline={false}>
                 <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>
               </Anchor>
             </div>

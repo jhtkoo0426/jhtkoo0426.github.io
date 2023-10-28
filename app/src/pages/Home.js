@@ -74,17 +74,16 @@ const Home = () => {
                     <br></br><br></br>
                     <div className="tools-container">
                         <div>
-                            <Title size="tiny">Software & Tools</Title>
+                            <Title size="tiny">Software</Title>
                             <br></br>
                             <div>
                                 <p>Python</p>
                                 <p>Java</p>
                                 <p>MySQL</p>
-                                <p>BigQuery</p>
                             </div>
                         </div>
                         <div>
-                            <Title size="tiny">Machine Learning Tools</Title>
+                            <Title size="tiny">Machine Learning</Title>
                             <br></br>
                             <div>
                                 <p>scikit-learn</p>
@@ -108,6 +107,8 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+
+            {/* Extra */}
         </motion.div>
     );
 }
