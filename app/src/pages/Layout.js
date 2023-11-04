@@ -12,54 +12,51 @@ import { faGithub, faLinkedin, faKaggle } from '@fortawesome/free-brands-svg-ico
 
 
 const Layout = () => {
+    // Detect the user's preferred color scheme. Returns TRUE if prefers dark.
+    const prefers_dark = window.matchMedia('(prefers-color-scheme: dark)');
+    console.log(prefers_dark)
+    if (prefers_dark.matches) {
+      document.documentElement.style.setProperty('mix-blend-mode', 'difference');
+    }
+
     return (
-      <>
-        {/* Top navigation bar */}
-        <motion.nav className="topnav-container" initial={{ opacity: 0, y: -50}} animate={{ opacity: 1, y: 0, transition: { delay: 0.25} }}>
-          <div className="home-button">
-            <Link to={"/"}>
-              <p className="name">j.</p>
-            </Link>
-          </div>
-          <div className="topnav-menu">
-            <NavLink className="topnav-link anchor underline" activeclassname="active" to="/">home</NavLink>
-            <NavLink className="topnav-link anchor underline" activeclassname="active" to="/work">work</NavLink>
-            <NavLink className="topnav-link anchor underline" activeclassname="active" to="/files/justin_koo_resume_2023.pdf" target="_blank" download>Résumé</NavLink>
-          </div>
+      <div className={"app-container"}>
+        <motion.nav
+          className="leftnav"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 0.75, delay: 1.25 }}
+          variants={{visible: { opacity: 1, x: 0 }, hidden: { opacity: 0, x: -100 }}}>
+          <NavLink className="anchor underline" activeclassname="active" to={"/"}>About</NavLink>
+          <NavLink className="anchor underline" activeclassname="active" to={"/ucl"}>Experiences</NavLink>
+          <NavLink className="anchor underline" activeclassname="active" to={"/ucl"}>Projects</NavLink>
+          <NavLink className="topnav-link anchor underline" activeclassname="active" to="/files/justin_koo_resume_2023.pdf" target="_blank" download>Résumé</NavLink>
         </motion.nav>
-
-        <nav className="sidenav-container">
-          <p>SCROLL DOWN</p>
-          <div className="arrow">
-            <span></span>
-            <span></span>
-          </div>
-        </nav>
-
-        <div className="app-container" id="app-container">
-          {/* Container for the main content of the portfolio */}
-          <div className="main-container"><Outlet/></div>
-          <nav className="botnav-container">
-            <Title size="standard">Interested? Let's get in touch!</Title>
-            <br></br>
-            <div className="botnav-bottom">
-              <p>©2023 Justin Koo </p>
-              <Anchor target={true} underline={false} href={"https://www.linkedin.com/in/koo-justin/"}>
-                <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
-              </Anchor>
-              <Anchor target={true} underline={false} href={"https://github.com/jhtkoo0426"}>
-                <FontAwesomeIcon icon={faLinkedin}></FontAwesomeIcon>
-              </Anchor>
-              <Anchor target={true} underline={false} href={"https://www.kaggle.com/jhtkoo0426"}>
-                <FontAwesomeIcon icon={faKaggle}></FontAwesomeIcon>
-              </Anchor>
-              <Anchor href={"mailto:jhtkbusiness@gmail.com"} target={true} underline={false}>
-                <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>
-              </Anchor>
-            </div>
-          </nav>
+        {/* Container for the main content of the portfolio */}
+        <div className="main-container">
+          <Outlet/>
         </div>
-      </>
+        {/* <nav className="botnav-container">
+          <Title size="standard">Interested? Let's get in touch!</Title>
+          <br></br>
+          <div className="botnav-bottom">
+            <p>©2023 Justin Koo </p>
+            <Anchor target={true} underline={false} href={"https://www.linkedin.com/in/koo-justin/"}>
+              <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
+            </Anchor>
+            <Anchor target={true} underline={false} href={"https://github.com/jhtkoo0426"}>
+              <FontAwesomeIcon icon={faLinkedin}></FontAwesomeIcon>
+            </Anchor>
+            <Anchor target={true} underline={false} href={"https://www.kaggle.com/jhtkoo0426"}>
+              <FontAwesomeIcon icon={faKaggle}></FontAwesomeIcon>
+            </Anchor>
+            <Anchor href={"mailto:jhtkbusiness@gmail.com"} target={true} underline={false}>
+              <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>
+            </Anchor>
+          </div>
+        </nav> */}
+      </div>
     )
 };
 

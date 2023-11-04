@@ -1,50 +1,43 @@
 import Anchor from "../components/Anchor";
 import Title from "../components/Title";
+import AnimatedDiv from "../components/AnimatedDiv";
+
 import { motion } from "framer-motion";
 
 import julius from "../media/julius.png";
 
 
 const Home = () => {
-    // Animating elements
+    // Animating elements using framer-motion
     const variants = {
-        text: {
-            visible: { opacity: 1, x: 0 },
-            hidden: { opacity: 0, x: -200 }, 
-            transition: { delay: 0.25}
-        },
-        julius: {
-            visible: { opacity: 1, x: 0 },
-            hidden: { opacity: 0, x: 200 }, 
-            transition: { delay: 0.25, duration: 5}
-        }
+        visible: { opacity: 1, x: 0 },
+        hidden: { opacity: 0, x: -100 }
     }
 
     return (
-        <motion.div className="home-container" exit={{ opacity: 0 }}>
-            {/* Section 01 - Landing */}
-            <div className="landing">
-                {/* Circular background aesthetic */}
-                <div className="background"></div>
-                <div className="landing-content">
-                    <div className="landing-intro">
-                        <Title animated={true} size={"huge"}>an analytical mind who explores</Title>
-                        <br></br><br></br>
-                        <motion.p initial="hidden" animate="visible" variants={variants.text}>Hi! I'm Justin, a Computer Science Graduate architecting the future with a
-                        foundation in data, based in the UK.</motion.p>
-                        <br></br>
-                        <Anchor id="landing-work-link" underline={false} href="/work">
-                            see my works<span></span>
-                        </Anchor>
+        <div className="home-container">
+            {/* Section 01 -Introduction */}
+            <div className="introduction">
+                <AnimatedDiv class_name={"name_title"} duration={0.75} delay={0} variants={variants}>
+                    <Title size={"tiny"}>name</Title>
+                </AnimatedDiv>
+                <br></br>
+                <AnimatedDiv class_name={"name"} duration={0.75} delay={0.5} variants={variants}>
+                    <Title animated={false} size={"small"}>Justin</Title>
+                    <p className="pronouciation">d͡ʒʌs.tɪn</p>
+                </AnimatedDiv>
+                <br></br>
+                <AnimatedDiv class_name={"status"} duration={0.75} delay={1} variants={variants}>
+                    <div className="current-role">
+                        <Title size={"tiny"}>currently</Title>
+                        <p>Data Analyst, Freelancer</p>
                     </div>
-                    <div className="landing-art">
-                        <motion.img src={julius} alt="" initial="hidden" animate="visible" variants={variants.julius}></motion.img>
+                    <div className="motive">
+                        <Title size={"tiny"}>motive</Title>
+                        <p>Architecting the future with a foundation in data</p>
                     </div>
-                </div>
-            </div>
-
-            {/* Section 03 - How I Work */}
-            <div className="how-i-work">
+                </AnimatedDiv>
+                <br></br><br></br><br></br>
                 <Title>How I Work.</Title>
                 <br></br>
                 <div>
@@ -57,59 +50,9 @@ const Home = () => {
                     to solve real-life problems through data analytics and computing skills. During 
                     projects, I maintain frequent communication between teammates and clients to 
                     ensure everyone works on the same page.</p>
-                    <br></br>
-                    <p>I prefer to listen carefully before providing solutions and analytics with 
-                    a perfect blend of preferences of my partners/clients, my experience, research 
-                    and best practices.</p>
                 </div>
             </div>
-
-            {/* Section 04 - Skillset & Tools */}
-            <div className="skillset">
-                <Title>My Skillset.</Title>
-                <br></br>
-                <div className="skillset-content">
-                    <p>I use a collection of tools that makes during development and analysis much easier across
-                    during ML and Data Analysis projects.</p>
-                    <br></br><br></br>
-                    <div className="tools-container">
-                        <div>
-                            <Title size="tiny">Software</Title>
-                            <br></br>
-                            <div>
-                                <p>Python</p>
-                                <p>Java</p>
-                                <p>MySQL</p>
-                            </div>
-                        </div>
-                        <div>
-                            <Title size="tiny">Machine Learning</Title>
-                            <br></br>
-                            <div>
-                                <p>scikit-learn</p>
-                                <p>keras</p>
-                                <p>PyTorch</p>
-                                <p>NumPy</p>
-                                <p>Jupyter</p>
-                            </div>
-                        </div>
-                        <div>
-                            <Title size="tiny">Web Development</Title>
-                            <br></br>
-                            <div>
-                                <p>HTML 5</p>
-                                <p>CSS</p>
-                                <p>JavaScript</p>
-                                <p>React JS</p>
-                                <p>Django</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            {/* Extra */}
-        </motion.div>
+        </div>
     );
 }
 

@@ -5,7 +5,6 @@ import React from "react";
 // Pages
 import Home from "./pages/Home";
 import Layout from "./pages/Layout";
-import Work from "./pages/Work";
 import UCLdiss from "./pages/UCLdiss";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -13,7 +12,6 @@ import ScrollToTop from "./components/ScrollToTop";
 import "../src/css/app.scss";
 import "../src/css/home.scss";
 import "../src/css/layout.scss";
-import "../src/css/work.scss";
 import "../src/css/ucldiss.scss";
 
 // Component SCSS
@@ -29,7 +27,6 @@ const AppRoute = () => {
       {/* Webframe for portfolio (Layout is the base template) */}
       <Route path="/" element={<Layout/>}>
         <Route path="/" index element={<Home/>} />
-        <Route path="/work" element={<Work/>} />
         <Route path="/ucl" element={<UCLdiss/>} />
       </Route>
     </Routes>

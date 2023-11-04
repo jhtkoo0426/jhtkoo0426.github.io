@@ -1,7 +1,6 @@
 // Styling for Title.js
 .title {
     font-family: 'AvertaBold';
-    color: var(--dark-grey);
 
     // Varying sizes of titles. Options: huge | Sstandard | small
     &.huge {
@@ -20,8 +19,12 @@
     }
 
     &.tiny {
-        font-size: 1rem;
-        line-height: 0.5rem;
+        font-size: 0.8rem;
+        line-height: 0.4rem;
+        font-family: 'Averta';
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        color: var(--grey);
     }
 
     &.transparent {
@@ -61,8 +64,8 @@
         }
     
         &.tiny {
-            font-size: 1rem;
-            line-height: 0.5rem;
+            font-size: 0.6rem;
+            line-height: 0.3rem;
         }
     }
 }

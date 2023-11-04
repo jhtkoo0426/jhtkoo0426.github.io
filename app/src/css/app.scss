@@ -1,9 +1,10 @@
 // Styling for App.js
 $white: #FFF;
-$grey: #F9F9F9;
-$black: #141414;
+$light-grey: #dfdfdf;
+$grey: #b3b3b3;
 $semidark-grey: #585858;
 $dark-grey: #363636;
+$black: #141414;
 
 
 *{
@@ -19,37 +20,21 @@ $dark-grey: #363636;
 :root {
     // Colour variables
     --white: #{$white};
-    --black: #{$black};
+    --light-grey: #{$light-grey};
     --grey: #{$grey};
     --semidark-grey: #{$semidark-grey};
     --dark-grey: #{$dark-grey};
+    --black: #{$black};
     
     // Navbar variables
     --topnav-992plus-height: 15vh;
 
+    background-color: var(--white);
+    color: var(--black);
+
     // Other constants
     line-height: 140%;
-    background-color: var(--grey);
     overflow-x: hidden;
-}
-
-
-// Scrollbar
-::-webkit-scrollbar {
-    width: 14px;
-    background-color: transparent;
-}
-  
-::-webkit-scrollbar-track {
-    border: solid 3px transparent;
-    background: var(--grey);
-}
-  
-::-webkit-scrollbar-thumb {
-    background-color: var(--dark-grey);
-    border-radius: 10px;
-    border: solid 3px transparent;
-    background-clip: content-box;
 }
 
 
@@ -84,12 +69,17 @@ $dark-grey: #363636;
     src: url("../fonts/Playfair/static/PlayfairDisplay-Bold.ttf");
 }
 
+@font-face {
+    font-family: 'RobotoMono';
+    src: url("../fonts/Roboto_Mono/static/RobotoMono-Regular.ttf");
+}
+
 
 // Default styling for anchor and text elements
 a, p, ul, li {
     line-height: 200%;
     font-size: 16px;
-    font-family: 'Inter';
+    font-family: 'RobotoMono';
 }
 
 ul {
