@@ -1,10 +1,5 @@
-import Anchor from "../components/Anchor";
 import Title from "../components/Title";
 import AnimatedDiv from "../components/AnimatedDiv";
-
-import { motion } from "framer-motion";
-
-import julius from "../media/julius.png";
 
 
 const Home = () => {
@@ -16,14 +11,14 @@ const Home = () => {
 
     return (
         <div className="home-container">
-            {/* Section 01 -Introduction */}
+            {/* Introduction */}
             <div className="introduction">
-                <AnimatedDiv class_name={"name_title"} duration={0.75} delay={0} variants={variants}>
+                <AnimatedDiv duration={0.75} delay={0} variants={variants}>
                     <Title size={"tiny"}>name</Title>
                 </AnimatedDiv>
                 <br></br>
-                <AnimatedDiv class_name={"name"} duration={0.75} delay={0.5} variants={variants}>
-                    <Title animated={false} size={"small"}>Justin</Title>
+                <AnimatedDiv class_name={"page_title"} duration={0.75} delay={0.5} variants={variants}>
+                    <Title animated={false} size={"standard"}>Justin</Title>
                     <p className="pronouciation">d͡ʒʌs.tɪn</p>
                 </AnimatedDiv>
                 <br></br>

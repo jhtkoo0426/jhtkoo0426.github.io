@@ -1,12 +1,11 @@
 // Styling for the homepage
 .home-container {
     .introduction {
-        height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
 
-        .name {
+        .page_title {
             display: flex;
             flex-direction: row;
             align-items: end;

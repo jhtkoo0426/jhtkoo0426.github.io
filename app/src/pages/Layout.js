@@ -12,13 +12,6 @@ import { faGithub, faLinkedin, faKaggle } from '@fortawesome/free-brands-svg-ico
 
 
 const Layout = () => {
-    // Detect the user's preferred color scheme. Returns TRUE if prefers dark.
-    const prefers_dark = window.matchMedia('(prefers-color-scheme: dark)');
-    console.log(prefers_dark)
-    if (prefers_dark.matches) {
-      document.documentElement.style.setProperty('mix-blend-mode', 'difference');
-    }
-
     return (
       <div className={"app-container"}>
         <motion.nav
@@ -29,7 +22,7 @@ const Layout = () => {
           transition={{ duration: 0.75, delay: 1.25 }}
           variants={{visible: { opacity: 1, x: 0 }, hidden: { opacity: 0, x: -100 }}}>
           <NavLink className="anchor underline" activeclassname="active" to={"/"}>About</NavLink>
-          <NavLink className="anchor underline" activeclassname="active" to={"/ucl"}>Experiences</NavLink>
+          <NavLink className="anchor underline" activeclassname="active" to={"/experiences"}>Experiences</NavLink>
           <NavLink className="anchor underline" activeclassname="active" to={"/ucl"}>Projects</NavLink>
           <NavLink className="topnav-link anchor underline" activeclassname="active" to="/files/justin_koo_resume_2023.pdf" target="_blank" download>Résumé</NavLink>
         </motion.nav>
