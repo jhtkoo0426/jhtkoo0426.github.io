@@ -5,6 +5,7 @@ $grey: #b3b3b3;
 $semidark-grey: #585858;
 $dark-grey: #363636;
 $black: #141414;
+$orange: #ffbf34;
 
 
 *{
@@ -25,6 +26,7 @@ $black: #141414;
     --semidark-grey: #{$semidark-grey};
     --dark-grey: #{$dark-grey};
     --black: #{$black};
+    --icon-color: #{$orange};
     
     // Navbar variables
     --topnav-992plus-height: 15vh;

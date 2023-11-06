@@ -1,0 +1,15 @@
+// Styling for the AnimatedDiv React component
+.page_title {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+
+    .pronouciation {
+        position: relative;
+        top: 8px;
+        padding-left: 10px;
+        font-style: italic;
+        font-family: 'InterReg';
+        color: var(--grey);
+    }
+}

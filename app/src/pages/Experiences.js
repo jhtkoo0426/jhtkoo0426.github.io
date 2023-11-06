@@ -54,7 +54,7 @@ const Experiences = () => {
     }
 
     return (
-        <div className="experiences-container">
+        <div className="experiences-container" style={{display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
             {/* Introduction */}
             <div className="introduction">
                 <AnimatedDiv duration={0.75} delay={0} variants={variants}>
@@ -68,9 +68,7 @@ const Experiences = () => {
             </div>
 
             {/* List work experiences */}
-            <Timeline timeline_components={timeline_components}>
-
-            </Timeline>
+            <Timeline timeline_components={timeline_components}></Timeline>
         </div>
     );
 }

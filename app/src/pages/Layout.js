@@ -23,7 +23,7 @@ const Layout = () => {
           variants={{visible: { opacity: 1, x: 0 }, hidden: { opacity: 0, x: -100 }}}>
           <NavLink className="anchor underline" activeclassname="active" to={"/"}>About</NavLink>
           <NavLink className="anchor underline" activeclassname="active" to={"/experiences"}>Experiences</NavLink>
-          <NavLink className="anchor underline" activeclassname="active" to={"/ucl"}>Projects</NavLink>
+          <NavLink className="anchor underline" activeclassname="active" to={"/projects"}>Projects</NavLink>
           <NavLink className="topnav-link anchor underline" activeclassname="active" to="/files/justin_koo_resume_2023.pdf" target="_blank" download>Résumé</NavLink>
         </motion.nav>
         {/* Container for the main content of the portfolio */}

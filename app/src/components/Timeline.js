@@ -18,7 +18,6 @@ class Timeline extends React.Component {
     }
 
     parse_timeline_component(event_details, eventId) {
-        this.delay += 0.1;
         return (
             <div className="timeline-event">
                 <div className="timeline-obj"></div>
