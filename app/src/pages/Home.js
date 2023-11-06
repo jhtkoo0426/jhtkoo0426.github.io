@@ -33,19 +33,21 @@ const Home = () => {
                     </div>
                 </AnimatedDiv>
                 <br></br><br></br><br></br>
-                <Title>How I Work.</Title>
-                <br></br>
-                <div>
-                    <p>I approach every challenge with curiosity and a growth mindset. I believe that
-                    the rapid evolution of technology requires continuous learning and adaptation. I
-                    stay up-to-date with the latest industry trends and embrace emerging technologies
-                    to stay ahead of the curve.</p>
+                <AnimatedDiv duration={0.75} delay={1.25} variants={variants}>
+                    <Title>How I Work.</Title>
                     <br></br>
-                    <p>My experience comes from working with multi-disciplinary teams and projects 
-                    to solve real-life problems through data analytics and computing skills. During 
-                    projects, I maintain frequent communication between teammates and clients to 
-                    ensure everyone works on the same page.</p>
-                </div>
+                    <div>
+                        <p>I approach every challenge with curiosity and a growth mindset. I believe that
+                        the rapid evolution of technology requires continuous learning and adaptation. I
+                        stay up-to-date with the latest industry trends and embrace emerging technologies
+                        to stay ahead of the curve.</p>
+                        <br></br>
+                        <p>My experience comes from working with multi-disciplinary teams and projects 
+                        to solve real-life problems through data analytics and computing skills. During 
+                        projects, I maintain frequent communication between teammates and clients to 
+                        ensure everyone works on the same page.</p>
+                    </div>
+                </AnimatedDiv>
             </div>
         </div>
     );

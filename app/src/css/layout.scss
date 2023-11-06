@@ -9,6 +9,11 @@
         position: fixed;
         left: 10%;
         top: 20%;
+
+        .contacts {
+            display: flex;
+            grid-column-gap: 15px;
+        }
     }
 
     .main-container {

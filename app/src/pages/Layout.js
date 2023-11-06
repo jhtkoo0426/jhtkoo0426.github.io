@@ -25,6 +25,20 @@ const Layout = () => {
           <NavLink className="anchor underline" activeclassname="active" to={"/experiences"}>Experiences</NavLink>
           <NavLink className="anchor underline" activeclassname="active" to={"/projects"}>Projects</NavLink>
           <NavLink className="topnav-link anchor underline" activeclassname="active" to="/files/justin_koo_resume_2023.pdf" target="_blank" download>Résumé</NavLink>
+          <div className="contacts">
+            <Anchor target={true} underline={false} href={"https://www.linkedin.com/in/koo-justin/"}>
+              <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
+            </Anchor>
+            <Anchor target={true} underline={false} href={"https://github.com/jhtkoo0426"}>
+              <FontAwesomeIcon icon={faLinkedin}></FontAwesomeIcon>
+            </Anchor>
+            <Anchor target={true} underline={false} href={"https://www.kaggle.com/jhtkoo0426"}>
+              <FontAwesomeIcon icon={faKaggle}></FontAwesomeIcon>
+            </Anchor>
+            <Anchor href={"mailto:jhtkbusiness@gmail.com"} target={true} underline={false}>
+              <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>
+            </Anchor>
+          </div>
         </motion.nav>
         {/* Container for the main content of the portfolio */}
         <div className="main-container">

@@ -14,7 +14,7 @@ const Projects = () => {
         <div className="projects-container">
             {/* Introduction */}
             <div className="introduction">
-                <AnimatedDiv duration={0.75} delay={0} variants={variants}>
+                <AnimatedDiv duration={0.75} delay={0.25} variants={variants}>
                     <Title size={"tiny"}>section</Title>
                 </AnimatedDiv>
                 <br></br>
@@ -27,7 +27,7 @@ const Projects = () => {
 
             {/* List of projects */}
             <ProjectShowcase
-                delay={0.25}
+                delay={0.75}
                 href={"/ucl"}
                 external={false}
                 variants={variants}
@@ -37,7 +37,7 @@ const Projects = () => {
                 tags={["Robotics", "Machine Learning", "Simulation"]}>
             </ProjectShowcase>
             <ProjectShowcase
-                delay={0.5}
+                delay={1}
                 href={"https://github.com/jhtkoo0426/Epidemic-Simulation"}
                 external={true}
                 variants={variants}
@@ -47,7 +47,7 @@ const Projects = () => {
                 tags={["Web Development (React JS)", "Simulation"]}>
             </ProjectShowcase>
             <ProjectShowcase
-                delay={0.75}
+                delay={1.25}
                 href={"http://students.cs.ucl.ac.uk/2021/group17/index.html"}
                 external={true}
                 variants={variants}
