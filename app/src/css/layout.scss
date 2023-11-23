@@ -1,17 +1,20 @@
 // Styling for the layout template
 
 // App layout
-.topnav-container {
+  
+.navbar {
+    width: 100%;
+    height: 100px;
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: var(--topnav-992plus-height);
-    padding: 0 5%;
-    z-index: 10;
+    padding: 0 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: height 0.3s; /* Add a smooth transition effect for the top property */
+    background-color: transparent;
+    
+    &.scrolled { height: 50px; }
 
     .home-button {
         a {
@@ -19,6 +22,7 @@
             text-decoration: none;
             font-size: 1.2rem;
             color: var(--black);
+            // color: var(--white);
 
             .name {
                 margin-right: 5vw;
@@ -39,6 +43,7 @@
             font-family: 'Inter';
             font-size: 14px;
             color: var(--black);
+            // color: var(--white);
 
             &.active {
                 font-family: 'InterBold';
@@ -47,86 +52,12 @@
     }
 }
 
-.sidenav-container {
-    position: fixed;
-    top: 60%;
-    left: calc(95vw - 18px);
-    display: flex;
-    align-items: center;
-    writing-mode: vertical-lr;
-    letter-spacing: 2px;
-    font-family: 'InterBold';
-    animation: moveScrollSpan 3s ease infinite;
-
-    @keyframes moveScrollSpan {
-        0% { margin-top: 10px; }
-        50% { margin-top: 25px; }
-        100% { margin-top: 10px; }
-    }
-
-    .arrow {
-
-        span:nth-of-type(odd) {
-            display: block;
-            width: 1px;
-            height: 40px;
-            writing-mode: vertical-lr;
-            border: 1px solid var(--dark-grey);
-            margin-top: 10px;
-        }
-
-        span:nth-of-type(even) {
-            position: relative;
-            top: 45px;
-            display: block;
-            width: 1px;
-            height: 5px;
-            transform: rotate(45deg);
-            border: 1px solid var(--dark-grey);
-        }
-    }
-}
-
-
 .app-container {
     width: 100%;
     height: 100%;
+    padding: 200px 10% 0 10%;
 }
 
-
-.botnav-container {
-    position: relative;
-    width: 100%;
-    padding: 10%;
-    background-color: var(--black);
-    color: var(--white);
-    
-    h1 {
-        text-align: center;
-        color:  var(--white);
-    }
-
-    .botnav-bottom {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-top: 5%;
-        gap: 20px;
-
-        p { font-size: 14px; }
-
-        a {
-            width: 30px;
-            height: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50%;
-            font-size: 20px;
-            color: var(--white);
-        }
-    }
-}
 
 
 // Handling mobile responsiveness
@@ -137,11 +68,7 @@
 @media only screen and (max-width: 992px) { }
 
 // Small Devices, Tablets
-@media only screen and (max-width: 768px) {
-    .botnav-container {
-        .title { font-size: 2rem !important; }
-    }
-}
+@media only screen and (max-width: 768px) { }
 
 // Extra Small Devices, Phones 
 @media only screen and (max-width: 480px) { }

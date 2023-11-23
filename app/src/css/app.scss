@@ -5,6 +5,7 @@ $mid-grey: #f1f1f1;
 $black: #141414;
 $semidark-grey: #585858;
 $dark-grey: #363636;
+$blue: rgb(27, 216, 223);
 
 
 *{
@@ -12,8 +13,6 @@ $dark-grey: #363636;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 
@@ -25,6 +24,9 @@ $dark-grey: #363636;
     --mid-grey: #{$mid-grey};
     --semidark-grey: #{$semidark-grey};
     --dark-grey: #{$dark-grey};
+
+    // Fresh colour variables
+    --blue: #{$blue};
     
     // Navbar variables
     --topnav-992plus-height: 15vh;
