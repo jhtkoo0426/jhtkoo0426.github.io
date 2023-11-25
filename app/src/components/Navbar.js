@@ -3,12 +3,12 @@ import { Outlet, Link, NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 
 
-const Navbar = ({id, children}) => {
+const Navbar = ({id, className, children, scrollY}) => {
     const [scrolled, setScrolled] = useState(false);
   
     useEffect(() => {
       const handleScroll = () => {
-        setScrolled(window.scrollY > 100);
+        setScrolled(window.scrollY > scrollY);
       };
   
       window.addEventListener('scroll', handleScroll);
@@ -19,7 +19,7 @@ const Navbar = ({id, children}) => {
     }, []);
   
     return (
-      <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+      <nav className={`navbar ${className} ${scrolled ? 'scrolled' : ''}`}>
         {children}
       </nav>
     );

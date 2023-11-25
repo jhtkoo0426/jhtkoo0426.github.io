@@ -5,7 +5,7 @@ $mid-grey: #f1f1f1;
 $black: #141414;
 $semidark-grey: #585858;
 $dark-grey: #363636;
-$blue: rgb(27, 216, 223);
+$nav-width: 60px;
 
 
 *{
@@ -25,14 +25,8 @@ $blue: rgb(27, 216, 223);
     --semidark-grey: #{$semidark-grey};
     --dark-grey: #{$dark-grey};
 
-    // Fresh colour variables
-    --blue: #{$blue};
-    
-    // Navbar variables
-    --topnav-992plus-height: 15vh;
-
     // Other constants
-    line-height: 140%;
+    --nav-width: 60px;
     background-color: var(--grey);
     overflow-x: hidden;
 }
