@@ -1,9 +1,22 @@
 // Layout.js
+// Import core libraries
 import React, { useState, useEffect } from 'react';
 import { Outlet, Link, NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
+
+// Import components
+import Anchor from "../components/Anchor";
+
+// Import SCSS files
 import "../css/layout.scss";
 import "../css/home.scss";
+
+// Other libraries
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faGithub, faLinkedin, faKaggle } from '@fortawesome/free-brands-svg-icons';
+
+
 
 const Layout = () => {
   return (
@@ -21,7 +34,22 @@ const Layout = () => {
         </div>
       </motion.nav>
       <div className="leftnav"></div>
-      <div className="rightnav"></div>
+      <div className="rightnav">
+        <div className='social-links'>
+          <Anchor target={true} underline={false} href={"https://www.linkedin.com/in/koo-justin/"}>
+            <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
+          </Anchor>
+          <Anchor target={true} underline={false} href={"https://github.com/jhtkoo0426"}>
+            <FontAwesomeIcon icon={faLinkedin}></FontAwesomeIcon>
+          </Anchor>
+          <Anchor target={true} underline={false} href={"https://www.kaggle.com/jhtkoo0426"}>
+            <FontAwesomeIcon icon={faKaggle}></FontAwesomeIcon>
+          </Anchor>
+          <Anchor href={"mailto:jhtkbusiness@gmail.com"} target={true} underline={false}>
+            <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>
+          </Anchor>
+        </div>
+      </div>
       <div className="app-container">
         {/* Container for the main content of the portfolio */}
         <div className="main-container"><Outlet /></div>

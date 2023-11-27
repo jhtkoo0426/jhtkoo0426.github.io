@@ -56,12 +56,19 @@
 
 .rightnav {
     position: fixed;
-    top: var(--nav-width);
+    top: 0;
     right: 0;
     width: var(--nav-width);
-    height: calc(100vh - var(--nav-width));
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     z-index: 10;
     background-color: var(--white);
+
+    .social-links {
+        text-align: center;
+    }
 }
 
 .app-container {
