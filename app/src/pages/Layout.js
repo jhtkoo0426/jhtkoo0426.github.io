@@ -1,5 +1,5 @@
 // Layout.js
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import { Outlet, Link, NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import "../css/layout.scss";

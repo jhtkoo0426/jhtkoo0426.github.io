@@ -2,10 +2,12 @@
 $white: #FFF;
 $grey: #F9F9F9;
 $mid-grey: #f1f1f1;
+$semidark-grey: #49484e;
+$dark-grey: #1C1B20;
 $black: #141414;
-$semidark-grey: #585858;
-$dark-grey: #363636;
 $nav-width: 60px;
+
+$blue: #fcff51; // #53bdf7;
 
 
 *{
@@ -19,15 +21,16 @@ $nav-width: 60px;
 :root {
     // Colour variables
     --white: #{$white};
-    --black: #{$black};
     --grey: #{$grey};
     --mid-grey: #{$mid-grey};
     --semidark-grey: #{$semidark-grey};
     --dark-grey: #{$dark-grey};
+    --black: #{$black};
+
+    --theme: #{$blue};
 
     // Other constants
-    --nav-width: 60px;
-    background-color: var(--grey);
+    --nav-width: 50px;
     overflow-x: hidden;
 }
 
@@ -60,6 +63,11 @@ $nav-width: 60px;
 @font-face {
     font-family: 'InterBold';
     src: url("../fonts/Inter/static/Inter-Bold.ttf");
+}
+
+@font-face {
+    font-family: 'InterExBold';
+    src: url("../fonts/Inter/static/Inter-ExtraBold.ttf");
 }
 
 @font-face {
