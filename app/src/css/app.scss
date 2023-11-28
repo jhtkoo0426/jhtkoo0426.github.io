@@ -2,12 +2,12 @@
 $white: #FFF;
 $grey: #F9F9F9;
 $mid-grey: #f1f1f1;
-$semidark-grey: #49484e;
+$semidark-grey: #737179;
 $dark-grey: #1C1B20;
 $black: #141414;
 $nav-width: 60px;
 
-$blue: #fcff51; // #53bdf7;
+$blue: #1df0bb; // #53bdf7 | #fcff51;
 
 
 *{
@@ -30,6 +30,7 @@ $blue: #fcff51; // #53bdf7;
     --theme: #{$blue};
 
     // Other constants
+    line-height: 140%;
     --nav-width: 50px;
     overflow-x: hidden;
 }

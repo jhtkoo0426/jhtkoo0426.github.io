@@ -54,6 +54,9 @@ const Layout = () => {
         {/* Container for the main content of the portfolio */}
         <div className="main-container"><Outlet /></div>
       </div>
+      <div className='botnav'>
+        botnav
+      </div>
     </>
   );
 };

@@ -10,7 +10,7 @@
     justify-content: space-between;
     background-color: var(--white);
     padding: 0 var(--nav-width);
-    z-index: 10;
+    z-index: 100;
 
     .home-button {
         a {
@@ -50,7 +50,7 @@
     left: 0;
     width: var(--nav-width);
     height: calc(100vh - var(--nav-width));
-    z-index: 10;
+    z-index: 100;
     background-color: var(--white);
 }
 
@@ -63,7 +63,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 10;
+    z-index: 100;
     background-color: var(--white);
 
     .social-links {
@@ -75,4 +75,14 @@
     margin: var(--nav-width) var(--nav-width) 0 var(--nav-width);
     background-color: var(--grey);
     z-index: 1;
+}
+
+.botnav {
+    position: fixed;
+    top: calc(100vh - var(--nav-width));
+    bottom: 0;
+    width: 100%;
+    height: var(--nav-width);
+    z-index: 100;
+    background-color: var(--white);
 }

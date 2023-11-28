@@ -1,7 +1,11 @@
+// Home.js template
+// Import core libraries
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 
+// Import components
 import Title from "../components/Title";
+
 
 
 const Home = () => {
@@ -23,6 +27,11 @@ const Home = () => {
     const introAnimation = useAnimation();
 
     const homeIntroContainerRef = useRef(null);
+    const homeContentAboutContainerRef = useRef(null);
+    const homeContentAnimation = useAnimation();
+
+    const skillsContainerRef = useRef(null);
+    const skillsAnimation = useAnimation();
 
     // Methods
     const handleScroll = (event) => {
@@ -62,60 +71,114 @@ const Home = () => {
             return scrollCount >= num_scrolls;
         }
 
-        // Common properties for title animation
-        const commonTitleAnimationProperties = {
+        // Properties for title animation
+        const titleAnimationProperties = {
             x: checkTriggerAnimationScrolls(triggerAnimationMinScrolls) ? homeContainerDimensions['width'] * 0.4 : 0,
             transition: { duration: 1, ease: [0.7, 0.2, 0.2, 0.85] },
         };
 
-        // Common properties for background animation
-        const commonBgAnimationProperties = {
+        // Properties for background animation
+        const bgAnimationProperties = {
             width: checkTriggerAnimationScrolls(triggerAnimationMinScrolls) ? '100%' : '50%',
             transition: { duration: 0.5, ease: [0.7, 0.2, 0.2, 0.85] },
         };
 
-        // Common properties for intro animation
-        const commonIntroAnimationProperties = {
+        // Properties for intro animation
+        const introAnimationProperties = {
             opacity: checkTriggerAnimationScrolls(triggerAnimationMinScrolls) ? 1 : 0,
             transition: { duration: 1 },
         };
 
+        // Properties for home-content container animation
+        const homeContentAnimationProperties = {
+            opacity: checkTriggerAnimationScrolls(5) ? 1 : 0,
+            transition: { duration: 0.75 },
+        };
+
+        // Properties for work skills container animation
+        console.log(scrollPosition)
+        const skillsAnimationProperties = {
+            transition: { type: 'tween', duration: 0.8 }
+        }
+
         // Adjust properties based on scrollDirection
-        if (scrollDirection === 1) {
-            commonTitleAnimationProperties.transition.delay = 0;
-            commonBgAnimationProperties.transition.delay = 0;
-            commonIntroAnimationProperties.transition.delay = animationWithDelay;
-        } else {
-            commonTitleAnimationProperties.transition.delay = animationWithDelay;
-            commonBgAnimationProperties.transition.delay = animationWithDelay;
-            commonIntroAnimationProperties.transition.delay = 0;
+        if (scrollDirection === 1) {    // Scroll down
+            titleAnimationProperties.transition.delay = 0;
+            bgAnimationProperties.transition.delay = 0;
+            introAnimationProperties.transition.delay = animationWithDelay;
+            homeContentAnimationProperties.transition.delay = animationWithDelay;
+            skillsAnimationProperties.y = scrollPosition * 0.1 - 100;
+        } else {    // Scroll up
+            titleAnimationProperties.transition.delay = animationWithDelay;
+            bgAnimationProperties.transition.delay = animationWithDelay;
+            introAnimationProperties.transition.delay = 0;
+            homeContentAnimationProperties.transition.delay = 0;
+            homeContentAnimationProperties.transition.duration = 0;
+            skillsAnimationProperties.y = scrollPosition * -0.1 + 100;
         }
 
         // Deploy animations
-        titleAnimation.start(commonTitleAnimationProperties);   // Animate "HELLO" introduction
-        bgAnimation.start(commonBgAnimationProperties);         // Animate theme colour background transition
-        introAnimation.start(commonIntroAnimationProperties);   // Animate self-introduction container
-
+        titleAnimation.start(titleAnimationProperties);                 // Animate "HELLO" introduction
+        bgAnimation.start(bgAnimationProperties);                       // Animate theme colour background transition
+        introAnimation.start(introAnimationProperties);                 // Animate self-introduction container
+        homeContentAnimation.start(homeContentAnimationProperties);     // Animate the home-container
+        skillsAnimation.start(skillsAnimationProperties);               // Animate the work skills container
         
-    }, [scrollCount, scrollDirection, bgAnimation, titleAnimation, introAnimation]);
+    }, [scrollCount, scrollPosition, scrollDirection, bgAnimation, titleAnimation, introAnimation, homeContentAnimation, skillsAnimation]);
 
     return (
         <div className='home-container'>
-            <div className='home-intro' ref={homeIntroContainerRef} style={{position: scrollCount < 5 ? 'fixed' : 'relative'}}>
+            {/* Landing introduction for the homepage */}
+            <div className='home-intro' ref={homeIntroContainerRef} style={{position: scrollCount < 5 ? 'fixed' : 'absolute'}}>
                 <motion.div className='surface' ref={titleContainerRef} animate={titleAnimation}>
                     <h1 className='title'>
                         <p>he</p>
-                        <p>llo</p>
+                        <p>llo.</p>
                     </h1>
                 </motion.div>
-                <motion.div className='background' ref={bgContainerRef} animate={bgAnimation }></motion.div>
+                <motion.div className='background' ref={bgContainerRef} animate={bgAnimation}></motion.div>
                 <motion.div className='intro' ref={introContainerRef} animate={introAnimation}>
                     <p className='pronounce'><span></span>d͡ʒʌs.tɪn</p>
                     <Title>Justin is a Computer Science graduate architecting the future with a foundation in data, <span>based in the UK</span>.</Title>
                 </motion.div>
             </div>
-            <div className='main-content'>
-                <h1>Main content</h1>
+
+            {/* Core content for the homepage */}
+            <div className='home-content'>
+                <motion.div className='about' ref={homeContentAboutContainerRef} animate={homeContentAnimation}>
+                    <Title size="huge">an analytical mind who explores.</Title>
+                    <div className='about-work-style'>
+                        <Title size="large">How I Work.</Title>
+                        <br></br><br></br>
+                        <p>I approach every challenge with curiosity and a growth mindset. I believe that the rapid 
+                        evolution of technology requires continuous learning and adaptation. I stay up-to-date with 
+                        the latest industry trends and embrace emerging technologies to stay ahead of the curve.</p>
+                        <br></br>
+                        <p>My experience comes from working with multi-disciplinary teams and projects to solve 
+                        real-life problems through data analytics and computing skills. During projects, I maintain 
+                        frequent communication between teammates and clients to ensure everyone works on the same page.</p>
+                    </div>
+                    <motion.div className='about-skillset' ref={skillsContainerRef} animate={skillsAnimation}>
+                        <div>
+                            <Title size="smaller">Scripting Languages</Title>
+                            <p>Python</p>
+                            <p>Java</p>
+                            <p>HTML, CSS, JavaScript</p>
+                        </div>
+                        <div>
+                            <Title size="smaller">AI & Machine Learning</Title>
+                            <p>AWS (S3, SageMaker)</p>
+                            <p>NLP (LLM Fine-Tuning)</p>
+                            <p>ML Models (MLPs, etc)</p>
+                        </div>
+                        <div>
+                            <Title size="smaller">Data Analytics</Title>
+                            <p>R</p>
+                            <p>Tableau</p>
+                            <p>Microsoft Excel</p>
+                        </div>
+                    </motion.div>
+                </motion.div>
             </div>
         </div>
     );
