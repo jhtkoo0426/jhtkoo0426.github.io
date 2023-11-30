@@ -68,7 +68,7 @@
     .home-content {
         position: absolute;
         top: calc(100vh - var(--nav-width));
-        width: calc(100vw - var(--nav-width) * 2);
+        width: calc(100vw - var(--nav-width) * 2 - 14px);
         height: auto;
         overflow-x: hidden;
         z-index: 1;
@@ -81,7 +81,7 @@
             grid-template-columns: 1fr 2fr;
             grid-column-gap: 15%;
             align-items: center;
-            padding: 10% 15%;
+            padding: 10% 0 10% 15%;
 
             >.title {
                 width: 70%;
@@ -113,8 +113,39 @@
             }
         }
 
-        .test {
-            height: 1000vh;
+        .work {
+            display: grid;
+            grid-template-columns: 3fr 4fr;
+            grid-gap: 10%;
+            padding: 10% 0;
+            
+            .work-title {
+                padding-left: 35%;
+            }
+
+            img { max-width: 100%; }
+
+            .work-subtitle {
+                width: 70%;
+                position: relative;
+                top: 60%;
+
+                .title > span {
+                    letter-spacing: 1px;
+                    line-height: 130%;
+                    font-family: 'PlayfairItalic';
+
+                    &.dot { color: var(--theme); }
+                }
+            }
+
+            .work-description {
+                width: 70%;
+                position: relative;
+                top: 20%;
+
+                p { padding-bottom: 10%; }
+            }
         }
     }
 }

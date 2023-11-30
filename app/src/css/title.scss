@@ -4,29 +4,39 @@
     color: var(--dark-grey);
 
     // Varying sizes of titles. Options: huge | Sstandard | small
+    &.giga {
+        font-size:  calc(6vw + 10px);
+        line-height: calc(5vw + 10px);
+    }
+
     &.huge {
-        font-size: 4.5rem;
-        line-height: 4.5rem;
+        font-size: calc(5.5vw + 10px);
+        line-height: calc(4.5vw + 10px);
+    }
+
+    &.large {
+        font-size: calc(4.75vw + 10px);
+        line-height: calc(4.5vw + 10px);
     }
 
     &.standard {
-        font-size: 3.5rem;
-        line-height: 3rem;
+        font-size: calc(4vw + 10px);
+        line-height: calc(3.5vw + 10px);
     }
 
     &.small {
-        font-size: 2.5rem;
-        line-height: 2rem;
+        font-size: calc(3vw + 10px);
+        line-height: calc(2.5vw + 10px);
     }
 
     &.smaller {
-        font-size: 1.5rem;
-        line-height: 1rem;
+        font-size: 1.5vw;
+        line-height: 1vw;
     }
 
     &.tiny {
-        font-size: 1rem;
-        line-height: 0.5rem;
+        font-size: 1vw;
+        line-height: 0.5vw;
     }
 
     &.transparent {
@@ -36,7 +46,7 @@
 
     &.averta { font-family: 'Averta'; }
     &.playfair { font-family: 'Playfair'; }
-    &.inter { font-family: 'Inter'; }
+    &.inter { font-family: 'InterExBold'; }
 }
 
 

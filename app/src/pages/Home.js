@@ -2,9 +2,14 @@
 // Import core libraries
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, useAnimation } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 // Import components
+import Anchor from '../components/Anchor';
 import Title from "../components/Title";
+
+// Import media
+import work from '../media/nlp.png'
 
 
 
@@ -178,6 +183,24 @@ const Home = () => {
                             <p>Microsoft Excel</p>
                         </div>
                     </motion.div>
+                </motion.div>
+                <motion.div className='work'>
+                    <div className='work-title'>
+                        <Title size="giga" font="inter">INNO</Title>
+                        <Title size="giga" font="inter">VATE.</Title>
+                    </div>
+                    <div className='work-subtitle'>
+                        <Title><span>Unleashing data</span></Title>
+                        <Title>innovation <span className='dot'>.</span></Title>
+                    </div>
+                    <img src={work} className='work-image' alt=''></img>
+                    <div className='work-description'>
+                        <p>Embarking on a data-driven journey, I specialize in leveraging cutting-edge techniques to extract meaningful insights, solve 
+                        complex problems, and drive innovation in the realms of data analysis and machine learning engineering. From predictive modeling 
+                        to deep learning applications, I thrive on transforming raw data into actionable intelligence, pushing the boundaries of what's 
+                        possible in the data landscape.</p>
+                        <Anchor>See my work</Anchor>
+                    </div>
                 </motion.div>
             </div>
         </div>

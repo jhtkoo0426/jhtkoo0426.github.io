@@ -24,7 +24,7 @@ const Layout = () => {
       <motion.nav className="topnav" initial={{ opacity: 0, y: -50}} animate={{ opacity: 1, y: 0, transition: { delay: 0.25} }}>
         <div className="home-button">
           <Link to={"/"}>
-            <p className="name">j.</p>
+            <p className="name">justin koo.</p>
           </Link>
         </div>
         <div className="topnav-menu">
@@ -54,8 +54,8 @@ const Layout = () => {
         {/* Container for the main content of the portfolio */}
         <div className="main-container"><Outlet /></div>
       </div>
-      <div className='botnav'>
-        botnav
+      <div className='botnav-placehold'>
+        
       </div>
     </>
   );
