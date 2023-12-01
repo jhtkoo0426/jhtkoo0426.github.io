@@ -1,37 +1,42 @@
 // Styling for Title.js
 .title {
+    line-height: 120%;
     font-family: 'AvertaBold';
-    color: var(--dark-grey);
 
-    // Varying sizes of titles. Options: huge | Sstandard | small
-    &.giga {
-        font-size:  calc(6vw + 10px);
-        line-height: calc(5vw + 10px);
+    // Specific stylign within title
+    > span {
+        &.dot { color: var(--theme); }
+        &.italic { font-family: 'PlayfairItalic'; }
     }
 
+    &.theme .title-top { background-color: var(--theme); }
+    &.darkgrey .title-top { background-color: var(--dark-grey); }
+
+    >.title-top {
+        width: 60px;
+        height: 1vw;
+        margin-bottom: 5%;
+    }
+
+    // Varying sizes of titles. Options: huge | Slarge | standard
     &.huge {
-        font-size: calc(5.5vw + 10px);
-        line-height: calc(4.5vw + 10px);
+        font-size: 130px;
+        line-height: 130px;
     }
 
     &.large {
-        font-size: calc(4.75vw + 10px);
-        line-height: calc(4.5vw + 10px);
+        font-size: 35px;
+        line-height: 35px;
     }
 
     &.standard {
-        font-size: calc(4vw + 10px);
-        line-height: calc(3.5vw + 10px);
+        font-size: 25px;
+        line-height: 25px;
     }
 
     &.small {
-        font-size: calc(3vw + 10px);
-        line-height: calc(2.5vw + 10px);
-    }
-
-    &.smaller {
-        font-size: 1.5vw;
-        line-height: 1vw;
+        font-size: 20px;
+        line-height: 20px;
     }
 
     &.tiny {
@@ -44,9 +49,10 @@
         color: transparent;
     }
 
+    // Determine font
     &.averta { font-family: 'Averta'; }
     &.playfair { font-family: 'Playfair'; }
-    &.inter { font-family: 'InterExBold'; }
+    &.inter { font-family: 'InterBlack'; }
 }
 
 
@@ -55,32 +61,37 @@
 @media only screen and (max-width: 1200px) {}
 
 // Medium Devices, Desktops
-@media only screen and (max-width: 992px) {}
-
-// Small Devices, Tablets
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 992px) {
     .title {
         &.huge {
-            font-size: 3.5rem;
-            line-height: 3.5rem;
+            font-size: 60px;
+            line-height: 60px;
+        }
+    
+        &.large {
+            font-size: 25px;
+            line-height: 30px;
         }
     
         &.standard {
-            font-size: 3rem;
-            line-height: 2.5rem;
+            font-size: 20px;
+            line-height: 20px;
         }
     
         &.small {
-            font-size: 2rem;
-            line-height: 1.5rem;
+            font-size: 15px;
+            line-height: 15px;
         }
     
         &.tiny {
-            font-size: 1rem;
-            line-height: 0.5rem;
+            font-size: 1vw;
+            line-height: 0.5vw;
         }
     }
 }
+
+// Small Devices, Tablets
+@media only screen and (max-width: 768px) {}
 
 // Extra Small Devices, Phones 
 @media only screen and (max-width: 480px) {}

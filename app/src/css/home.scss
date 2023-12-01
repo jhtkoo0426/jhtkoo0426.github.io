@@ -12,16 +12,16 @@
             grid-row: 1;
             grid-column: 1;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             z-index: 50;
 
-            .title p {
+            .title {
                 text-transform: uppercase;
-                line-height: 100%;
-                font-family: 'InterExBold';
+                line-height: 90%;
+                // font-family: 'InterExBold';
                 font-size: calc(10rem + 2vw);
-                color: var(--dark-grey);
             }
         }
 
@@ -72,7 +72,7 @@
         height: auto;
         overflow-x: hidden;
         z-index: 1;
-        padding: 10% 0;
+        padding-bottom: 10%;
         background-color: var(--grey);
 
         .about {
@@ -86,8 +86,9 @@
             >.title {
                 width: 70%;
                 grid-column: 1 / 3;
-                margin-bottom: 10vh;
                 color: var(--theme);
+
+                &:nth-child(3) { margin-bottom: 10vh; }
             }
 
             .about-skillset {
@@ -116,26 +117,26 @@
         .work {
             display: grid;
             grid-template-columns: 3fr 4fr;
-            grid-gap: 10%;
+            grid-column-gap: 10%;
+            grid-row-gap: 15%;
             padding: 10% 0;
             
             .work-title {
                 padding-left: 35%;
             }
 
-            img { max-width: 100%; }
+            .project-carousel {
+                max-width: 100%;
+                background-color: var(--theme);
+            }
 
             .work-subtitle {
                 width: 70%;
                 position: relative;
-                top: 60%;
+                top: 80%;
 
                 .title > span {
                     letter-spacing: 1px;
-                    line-height: 130%;
-                    font-family: 'PlayfairItalic';
-
-                    &.dot { color: var(--theme); }
                 }
             }
 
@@ -146,6 +147,38 @@
 
                 p { padding-bottom: 10%; }
             }
+        }
+    }
+}
+
+
+@media (max-width: 992px) {
+    .home-container > .home-content {
+        .about {
+            display: block;
+            // margin: 5% 0;
+            padding: 10% 0 5% 0;
+    
+            >.title, .about-work-style {
+                margin: 0 17.5%;
+            }
+    
+            .about-work-style {
+                margin-bottom: 10%;
+            }
+    
+            .about-skillset {
+                position: relative;
+                top: 5%;
+            }
+        }
+
+        .work {
+            display: block;
+            padding: 10% 15% 5% 15%;
+
+            .work-title { padding-left: 0;}
+            .work-subtitle { margin: 10% 0;}
         }
     }
 }

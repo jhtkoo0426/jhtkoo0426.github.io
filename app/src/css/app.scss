@@ -67,8 +67,8 @@ $blue: #1df0bb; // #53bdf7 | #fcff51;
 }
 
 @font-face {
-    font-family: 'InterExBold';
-    src: url("../fonts/Inter/static/Inter-ExtraBold.ttf");
+    font-family: 'InterBlack';
+    src: url("../fonts/Inter/static/Inter-Black.ttf");
 }
 
 @font-face {
@@ -101,7 +101,7 @@ $blue: #1df0bb; // #53bdf7 | #fcff51;
 // Default styling for anchor and text elements
 a, p, ul, li {
     line-height: 200%;
-    font-size: calc(0.45vw + 8px);
+    font-size: 14px;
     font-family: 'Inter';
     color: var(--dark-grey);
 }
@@ -116,7 +116,12 @@ ul {
 @media only screen and (max-width: 1200px) {}
 
 // Medium Devices, Desktops
-@media only screen and (max-width: 992px) { }
+@media only screen and (max-width: 992px) {
+    a, p, ul, li {
+        line-height: 160%;
+        font-size: 13px;
+    }
+}
 
 // Small Devices, Tablets
 @media only screen and (max-width: 768px) {

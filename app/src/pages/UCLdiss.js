@@ -17,7 +17,7 @@ import ucl_diss_vid from "../videos/dissertation-demo.mp4";
 const UCLdiss = () => {
     return (
         <div className="ucl-container">
-            <Title size={"standard"}>Robust Robotic Grasping Utilising Touch Sensing</Title>
+            <Title size={"large"}>Robust Robotic Grasping Utilising Touch Sensing</Title>
             <br></br>
             <p>This is a machine learning and robotics vision study that I conducted during 
             my time at University College London, collaborating closely with 
@@ -36,7 +36,7 @@ const UCLdiss = () => {
             performance, specifically the grasp success rate, of a robotic arm within a Python 
             simulation.</p>
             <br></br>
-            <Title size={"small"}>Problem</Title>
+            <Title size={"standard"}>Problem</Title>
             <br></br>
             <p>The challenge of the project is to develop a machine learning model for robotic 
             grasping with limited amount of data, which was collected semi-manually via a 
@@ -50,7 +50,7 @@ const UCLdiss = () => {
             data, to choose the right grasping configuration.</p>
             {/* mention learning linux */}
             <br></br>
-            <Title size={"small"}>Data Collection</Title>
+            <Title size={"standard"}>Data Collection</Title>
             <br></br>
             <p>This project is concerned with 2 types of data:</p>
             <ul>
@@ -74,7 +74,7 @@ const UCLdiss = () => {
                 Your browser does not support the video tag.
             </video>
             <br></br><br></br>
-            <Title size={"small"}>Data Processing</Title>
+            <Title size={"standard"}>Data Processing</Title>
             <br></br>
             <p>The tactile and visual data were stored in numpy arrays during data collection. They were 
             then visualised, cleaned and validated to remove any abnormalities such as random noisy data.</p>
@@ -83,7 +83,7 @@ const UCLdiss = () => {
             <br></br><br></br>
             <img src={ucl_diss_pic2} alt=""></img>
             <br></br><br></br>
-            <Title size={"small"}>Feature Engineering & Data Pre-processing</Title>
+            <Title size={"standard"}>Feature Engineering & Data Pre-processing</Title>
             <br></br>
             <p>To access the efficacy of utilising the multi-modal dataset, I experimented with different
             combinations of the tactile and visual data to determine the best representation for my analysis.
@@ -104,7 +104,7 @@ const UCLdiss = () => {
             using a ConvNet and selecting only the top 5 components provides comparable accuracy with a significantly
             lower data dimensionality. This formed the basis for actual training in further sections of the project.</p>
             <br></br>
-            <Title size={"small"}>Multilayer Perceptron for Grasp Stability Prediction</Title>
+            <Title size={"standard"}>Multilayer Perceptron for Grasp Stability Prediction</Title>
             <br></br>
             <p>I chose to use a MLP to predict whether a grasp configuration (finger positions and angles) would 
             infer a stable and successful grasp. This is because MLPs are well-suited to learn non-linear relationships
@@ -144,7 +144,7 @@ const UCLdiss = () => {
             <br></br>
             <img src={ucl_diss_pic6} alt=""></img>
             <br></br><br></br>
-            <Title size={"standard"}>Results</Title>
+            <Title size={"large"}>Results</Title>
             <br></br>
             <p>Finally, considering different dataset combinations and transform techniques, I was able to gather informed
             results on which factors impact model accuracy the most:</p>
@@ -163,7 +163,7 @@ const UCLdiss = () => {
             MLP model. This selection represents a judicious choice, as it reduces the dimensionality of the dataset from 
             (1440, 512) to (1440, 16), while preserving and even enhancing the general level of accuracy.</p>
             <br></br>
-            <Title size={"standard"}>Addressing limitations</Title>
+            <Title size={"large"}>Addressing limitations</Title>
             <br></br>
             <p>This study was subject to the relatively modest sample size of the dataset we collected. This shortcoming 
             may have exerted an impact on the accuracy of our findings. The source of this limitation is primarily attributed 
