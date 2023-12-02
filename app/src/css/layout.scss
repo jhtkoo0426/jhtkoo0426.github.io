@@ -1,14 +1,35 @@
 // Styling for Layout.js
+
+// Lenis smooth scrolling
+html.lenis {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+    pointer-events: none;
+}
+
 .topnav {
     position: fixed;
     top: 0;
     width: 100%;
-    height: var(--nav-width);
+    height: calc(var(--nav-width) * 2);
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--white);
     padding: 0 var(--nav-width);
     z-index: 100;
 
@@ -28,6 +49,7 @@
 
     .topnav-menu {
         display: flex;
+        justify-content: right;
         gap: 40px;
 
         .topnav-link {
@@ -37,7 +59,7 @@
             text-decoration: none;
             font-family: 'InterReg';
             font-size: 12px;
-            color: var(--black);
+            color: var(--white);
 
             &.active { font-family: 'InterBold'; }
         }
@@ -46,12 +68,26 @@
 
 .leftnav {
     position: fixed;
-    top: var(--nav-width);
+    top: 0;
     left: 0;
-    width: var(--nav-width);
-    height: calc(100vh - var(--nav-width));
+    width: calc(var(--nav-width) * 2);
+    height: 100%;
+    padding: calc(var(--nav-width) * 2) 0;
+    display: flex;
+    justify-content: center;
+    align-items: end;
     z-index: 100;
-    background-color: var(--white);
+
+    .social-links {
+        text-align: center;
+        position: relative;
+        left: 5px;
+
+        .anchor { 
+            font-size: 16px;
+            color: var(--white);
+        }
+    }
 }
 
 .rightnav {
@@ -64,16 +100,10 @@
     align-items: center;
     justify-content: center;
     z-index: 100;
-    background-color: var(--white);
-
-    .social-links {
-        text-align: center;
-    }
 }
 
 .app-container {
-    margin: var(--nav-width) var(--nav-width) 0 var(--nav-width);
-    background-color: var(--grey);
+    margin: calc(var(--nav-width) * 2);
     z-index: 1;
 }
 
@@ -84,5 +114,4 @@
     width: 100%;
     height: var(--nav-width);
     z-index: 100;
-    background-color: var(--white);
 }
