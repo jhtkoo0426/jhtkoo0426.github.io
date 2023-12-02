@@ -24,7 +24,10 @@ const Home = () => {
 
             {/* About me */}
             <div className='about'>
-                <Title font='interbold' text_transform='upper'>about me</Title>
+                <Title size='small' font='inter' text_transform='upper'>about me</Title>
+                <Title className='about-text' size='medium' font='interbold' text_transform='normal' masked={true}>
+                    I'm a data analyst with a strong focus on delivering impactful solutions through creative methods, including AI&ML.
+                </Title>
             </div>
             {/* What I do (skills) */}
             <div className='skillset'>

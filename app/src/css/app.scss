@@ -1,10 +1,10 @@
 // Styling for App.js
-$white: #FFF;
+$theme-secondary: #cafaee;
 $grey: #F9F9F9;
 $mid-grey: #f1f1f1;
 $semidark-grey: #1b1a1a;
 $dark-grey: #141414;
-$black: #000;
+$black: #0D0D0D;
 $nav-width: 60px;
 
 $blue: #1df0bb; // #53bdf7 | #fcff51;
@@ -20,7 +20,7 @@ $blue: #1df0bb; // #53bdf7 | #fcff51;
 
 :root {
     // Colour variables
-    --white: #{$white};
+    --theme-secondary: #{$theme-secondary};
     --grey: #{$grey};
     --mid-grey: #{$mid-grey};
     --semidark-grey: #{$semidark-grey};
@@ -34,7 +34,7 @@ $blue: #1df0bb; // #53bdf7 | #fcff51;
     --nav-width: 120px;
     overflow-x: hidden;
     background-color: var(--black);
-    color: var(--white);
+    color: var(--theme-secondary);
 }
 
 

@@ -5,20 +5,18 @@
     overflow: auto;
     white-space: normal;
     word-wrap: break-word;
-
-    // Specific stylign within title
-    > span {
-        &.dot { color: var(--theme); }
-        &.italic { font-family: 'PlayfairItalic'; }
-    }
-
-    &.theme .title-top { background-color: var(--theme); }
-    &.darkgrey .title-top { background-color: var(--dark-grey); }
+    color: var(--theme-secondary);
 
     >.title-top {
         width: 60px;
         height: 1vw;
         margin-bottom: 5%;
+    }
+
+    // Text masking (optional)
+    >.masked {
+        color: var(--theme-secondary);
+        span { color: var(--theme);}
     }
 
     // Varying sizes of titles. Options: huge | Slarge | standard
@@ -28,8 +26,13 @@
     }
 
     &.large {
-        font-size: 35px;
-        line-height: 35px;
+        font-size: 6rem;
+        line-height: 7rem;
+    }
+
+    &.medium {
+        font-size: 4rem;
+        line-height: 5rem;
     }
 
     &.standard {
@@ -48,7 +51,7 @@
     }
 
     &.transparent {
-        -webkit-text-stroke: 1px var(--white);
+        -webkit-text-stroke: 1px var(--theme-secondary);
         color: transparent;
     }
 
@@ -70,7 +73,8 @@
 @media only screen and (max-width: 1200px) {
     .title {
         &.huge { font-size: 6rem; line-height: 5rem; }
-        &.large { font-size: 25px; line-height: 30px; }
+        &.large { font-size: 4rem; line-height: 3rem; }
+        &.medium { font-size: 2rem; line-height: 2.2rem;}
         &.standard { font-size: 20px; line-height: 20px; }
         &.small { font-size: 15px; line-height: 15px; }
         &.tiny { font-size: 1vw; line-height: 0.5vw; }
