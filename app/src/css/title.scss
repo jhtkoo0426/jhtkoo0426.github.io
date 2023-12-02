@@ -2,6 +2,9 @@
 .title {
     line-height: 120%;
     font-family: 'AvertaBold';
+    overflow: auto;
+    white-space: normal;
+    word-wrap: break-word;
 
     // Specific stylign within title
     > span {
@@ -20,8 +23,8 @@
 
     // Varying sizes of titles. Options: huge | Slarge | standard
     &.huge {
-        font-size: 130px;
-        line-height: 130px;
+        font-size: 8rem;
+        line-height: 7rem;
     }
 
     &.large {
@@ -52,49 +55,48 @@
     // Determine font
     &.averta { font-family: 'Averta'; }
     &.playfair { font-family: 'Playfair'; }
-    &.inter { font-family: 'InterBlack'; }
+    &.inter { font-family: 'InterThin'; }
+    &.interbold { font-family: 'InterBlack'; }
+
+    // Determine text transform
+    &.normal { text-transform: none; }
+    &.upper { text-transform: uppercase; }
+    &.lower { text-transform: lowercase; }
 }
 
 
 // Handling mobile responsiveness
 // Large Devices, Wide Screens
-@media only screen and (max-width: 1200px) {}
+@media only screen and (max-width: 1200px) {
+    .title {
+        &.huge { font-size: 6rem; line-height: 5rem; }
+        &.large { font-size: 25px; line-height: 30px; }
+        &.standard { font-size: 20px; line-height: 20px; }
+        &.small { font-size: 15px; line-height: 15px; }
+        &.tiny { font-size: 1vw; line-height: 0.5vw; }
+    }
+}
 
 // Medium Devices, Desktops
 @media only screen and (max-width: 992px) {
     .title {
-        &.huge {
-            font-size: 60px;
-            line-height: 60px;
-        }
-    
-        &.large {
-            font-size: 25px;
-            line-height: 30px;
-        }
-    
-        &.standard {
-            font-size: 20px;
-            line-height: 20px;
-        }
-    
-        &.small {
-            font-size: 15px;
-            line-height: 15px;
-        }
-    
-        &.tiny {
-            font-size: 1vw;
-            line-height: 0.5vw;
-        }
+        &.huge { font-size: 5rem; line-height: 4.5rem; }
     }
 }
 
 // Small Devices, Tablets
-@media only screen and (max-width: 768px) {}
+@media only screen and (max-width: 768px) {
+    .title {
+        &.huge { font-size: 4rem; line-height: 3.5rem; }
+    }
+}
 
 // Extra Small Devices, Phones 
-@media only screen and (max-width: 480px) {}
+@media only screen and (max-width: 480px) {
+    .title {
+        &.huge { font-size: 3rem; line-height: 3rem; }
+    }
+}
 
 // Custom, iPhone Retina
 @media only screen and (max-width : 320px) {}

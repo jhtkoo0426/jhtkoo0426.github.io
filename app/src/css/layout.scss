@@ -1,44 +1,32 @@
 // Styling for Layout.js
-
 // Lenis smooth scrolling
-html.lenis {
-    height: auto;
-}
+html.lenis { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+.lenis.lenis-scrolling iframe { pointer-events: none; }
 
-.lenis.lenis-smooth {
-    scroll-behavior: auto;
-}
 
-.lenis.lenis-smooth [data-lenis-prevent] {
-    overscroll-behavior: contain;
-}
-
-.lenis.lenis-stopped {
-    overflow: hidden;
-}
-
-.lenis.lenis-scrolling iframe {
-    pointer-events: none;
-}
-
+// Navigation styling
 .topnav {
     position: fixed;
     top: 0;
     width: 100%;
-    height: calc(var(--nav-width) * 2);
+    height: var(--nav-width);
     display: flex;
     flex-direction: row;
-    align-items: center;
+    // align-items: center;
     justify-content: space-between;
-    padding: 0 var(--nav-width);
+    padding: 0 calc(var(--nav-width) / 2);
     z-index: 100;
 
     .home-button {
+        margin-top: calc(var(--nav-width) / 2);
         a {
             display: flex;
             text-decoration: none;
             font-size: 1.2rem;
-            color: var(--black);
+            color: var(--white);
 
             .name {
                 margin-right: 5vw;
@@ -48,20 +36,16 @@ html.lenis {
     }
 
     .topnav-menu {
-        display: flex;
-        justify-content: right;
-        gap: 40px;
+        margin-top: calc(var(--nav-width) / 2);
 
         .topnav-link {
             letter-spacing: 2px;
-            text-align: center;
-            text-transform: lowercase;
+            text-transform: uppercase;
             text-decoration: none;
-            font-family: 'InterReg';
-            font-size: 12px;
+            font-family: 'InterBold';
             color: var(--white);
 
-            &.active { font-family: 'InterBold'; }
+            &.active { color: var(--theme); }
         }
     }
 }
@@ -70,9 +54,9 @@ html.lenis {
     position: fixed;
     top: 0;
     left: 0;
-    width: calc(var(--nav-width) * 2);
+    width: var(--nav-width);
     height: 100%;
-    padding: calc(var(--nav-width) * 2) 0;
+    padding: var(--nav-width) 0;
     display: flex;
     justify-content: center;
     align-items: end;
@@ -103,7 +87,6 @@ html.lenis {
 }
 
 .app-container {
-    margin: calc(var(--nav-width) * 2);
     z-index: 1;
 }
 
