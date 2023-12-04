@@ -40,7 +40,7 @@ const Home = () => {
                 <Title
                     className='about-text' size='medium' font='averta' text_transform='normal' masked={true}
                     normal_text={"I'm a data analyst with a strong focus on delivering impactful solutions through creative methods, including AI&ML."}
-                    // hovered_text={"Cooking something up"}
+                    hovered_text={"Cooking something up"}
                 ></Title>
             </div>
             {/* What I do (skills) */}

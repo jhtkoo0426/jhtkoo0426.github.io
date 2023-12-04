@@ -11,7 +11,7 @@ const CustomCursor = () => {
 
       // Check if the cursor is over an h1 element
       const hoveredElement = document.elementFromPoint(e.clientX, e.clientY);
-      setIsHoveringH1(hoveredElement && hoveredElement.tagName === 'H1');
+      setIsHoveringH1(hoveredElement && (hoveredElement.classList.contains('title') || hoveredElement.classList.contains('masked')));
     };
 
     document.addEventListener('mousemove', handleMouseMove);
