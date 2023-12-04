@@ -10,10 +10,11 @@
             grid-row: 1;
             grid-column: 1;
             z-index: 5;
-            padding: 0 var(--nav-width);
+            padding: 0 15%;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            text-align: center;
             overflow: auto;
             white-space: normal;
             word-wrap: break-word;
@@ -22,6 +23,7 @@
                 width: 100%;
                 letter-spacing: 2px;
                 color: var(--theme-secondary);
+                overflow: hidden;
 
                 &.name { padding-bottom: 5%; }
                 &.intro-text {  }
@@ -62,20 +64,26 @@
         }
     }
 
-    .about {
+    .about-wrapper {
         height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 0 var(--nav-width);
+        padding: 0 15%;
+
+        .about-title {
+            letter-spacing: 2px;
+            overflow: hidden;
+        }
 
         .about-text {
             padding-top: 5%;
             color: var(--semidark-grey);
+            overflow: hidden;
         }
     }
 
-    .skillset {
+    .skillset-wrapper {
         height: 100vh;
     }
 }

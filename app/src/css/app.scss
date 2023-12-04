@@ -1,5 +1,5 @@
 // Styling for App.js
-$theme-secondary: #cafaee;
+$theme-secondary: #B7AB98;
 $grey: #F9F9F9;
 $mid-grey: #f1f1f1;
 $semidark-grey: #1b1a1a;
@@ -7,7 +7,7 @@ $dark-grey: #141414;
 $black: #0D0D0D;
 $nav-width: 60px;
 
-$blue: #1df0bb; // #53bdf7 | #fcff51;
+$blue: #FEF250; // #53bdf7 | #fcff51 | #1da3f0;
 
 
 *{
@@ -39,10 +39,10 @@ $blue: #1df0bb; // #53bdf7 | #fcff51;
 
 
 // Scrollbar
-::-webkit-scrollbar {
-    width: 0px;
-    background-color: transparent;
-}
+// ::-webkit-scrollbar {
+//     width: 0px;
+//     background-color: transparent;
+// }
 
 
 // Webfonts
@@ -102,6 +102,25 @@ a, p, ul, li {
 
 ul {
     padding-left: 30px;
+}
+
+
+// Cursor
+.custom-cursor {
+    position: fixed;
+    pointer-events: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--theme);
+    z-index: 9999;
+    mix-blend-mode: difference;
+    transition: transform 0.3s ease; /* Add a smooth transition effect */
+
+
+    &.hover-h1 {
+        transform: scale(15);
+    }
 }
 
 

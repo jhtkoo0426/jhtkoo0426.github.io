@@ -19,6 +19,8 @@ import { faGithub, faLinkedinIn, faKaggle } from '@fortawesome/free-brands-svg-i
 // Smooth parallax scroll
 import Lenis from '@studio-freight/lenis'
 
+import CustomCursor from '../components/CustomCursor';
+
 
 
 const Layout = () => {
@@ -29,9 +31,11 @@ const Layout = () => {
         requestAnimationFrame(raf)
     }
     requestAnimationFrame(raf)
+    
 
     return (
         <>
+          <CustomCursor />
           <motion.nav className="topnav" initial={{ opacity: 0, y: -50}} animate={{ opacity: 1, y: 0, transition: { delay: 0.25} }}>
             <div className="home-button">
               <Link to={"/"}>

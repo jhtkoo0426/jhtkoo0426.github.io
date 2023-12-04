@@ -16,18 +16,32 @@ const Home = () => {
             {/* Grid layout wrapper for overlapping content with different z-indexes. */}
             <div className='landing-wrapper'>
                 <div className='landing-intro'>
-                    <Title className='name' size='small' font='inter' text_transform='upper'>justin koo</Title>
-                    <Title className='intro-text' size='huge' font='interbold' text_transform='upper'>architecting the future with a foundation in data</Title>
+                    <Title
+                        className='name' size='small' font='averta' text_transform='upper'
+                        normal_text={"justin koo"}
+                        hovered_text={"hi there!"}
+                    ></Title>
+                    <Title
+                        className='intro-text' size='huge' font='averta' text_transform='upper'
+                        normal_text={"architecting the future with a foundation in data"}
+                        hovered_text={"struggling with life with a foundation in data"}
+                    ></Title>
                 </div>
                 <div className='landing-bg'></div>
             </div>
 
             {/* About me */}
-            <div className='about'>
-                <Title size='small' font='inter' text_transform='upper'>about me</Title>
-                <Title className='about-text' size='medium' font='interbold' text_transform='normal' masked={true}>
-                    I'm a data analyst with a strong focus on delivering impactful solutions through creative methods, including AI&ML.
-                </Title>
+            <div className='about-wrapper'>
+                <Title
+                    className='about-title' size='small' font='averta' text_transform='upper'
+                    normal_text={"about me"}
+                    // hovered_text={"about me"}
+                    ></Title>
+                <Title
+                    className='about-text' size='medium' font='averta' text_transform='normal' masked={true}
+                    normal_text={"I'm a data analyst with a strong focus on delivering impactful solutions through creative methods, including AI&ML."}
+                    // hovered_text={"Cooking something up"}
+                ></Title>
             </div>
             {/* What I do (skills) */}
             <div className='skillset'>
