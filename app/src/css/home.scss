@@ -7,6 +7,7 @@
 
         .landing-intro {
             // Use grid-row = 1 and grid-column = 1 to perfectly overlap elements
+            height: 100vh;
             grid-row: 1;
             grid-column: 1;
             z-index: 5;
@@ -22,46 +23,12 @@
             .title {
                 width: 100%;
                 letter-spacing: 2px;
-                color: var(--theme-secondary);
                 overflow: hidden;
 
                 &.name { padding-bottom: 5%; }
-                &.intro-text {  }
             }
         }
 
-        .landing-bg {
-            // Use grid-row = 1 and grid-column = 1 to perfectly overlap elements
-            position: absolute;
-            left: -50%;
-            right: -50%;
-            width: 200%;
-            height: 100vh;
-            overflow: hidden;
-            grid-row: 1;
-            grid-column: 1;
-            z-index: 1;
-            background-color: var(--dark-grey); /* Fallback color */
-            background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
-            background-repeat: repeat;
-            animation: bg-animation .2s infinite;
-            opacity: .9;
-            visibility: visible;
-        }
-
-        @keyframes bg-animation {
-            0% { transform: translateX(0); }
-            10% { transform: translateX(-5%); }
-            20% { transform: translateX(-10%); }
-            30% { transform: translateX(5%); }
-            40% { transform: translateX(-5%); }
-            50% { transform: translateX(-10%); }
-            60% { transform: translateX(15%); }
-            70% { transform: translateX(0); }
-            80% { transform: translateX(-15%); }
-            90% { transform: translateX(10%); }
-            100% { transform: translateX(5%); }
-        }
     }
 
     .about-wrapper {
@@ -78,12 +45,19 @@
 
         .about-text {
             padding-top: 5%;
-            color: var(--semidark-grey);
+            color: var(--grey);
             overflow: hidden;
         }
     }
 
-    .skillset-wrapper {
+    .projects-wrapper {
         height: 100vh;
+        padding: 10% 15%;
+
+        .projects-grid {
+            height: 100%;
+            display: flex;
+            grid-column-gap: 10px;
+        }
     }
 }

@@ -7,7 +7,7 @@ $dark-grey: #141414;
 $black: #0D0D0D;
 $nav-width: 60px;
 
-$blue: #FEF250; // #53bdf7 | #fcff51 | #1da3f0;
+$blue: #fe9e50; // #53bdf7 | #fcff51 | #1da3f0;
 
 
 *{
@@ -27,14 +27,14 @@ $blue: #FEF250; // #53bdf7 | #fcff51 | #1da3f0;
     --dark-grey: #{$dark-grey};
     --black: #{$black};
 
-    --theme: #{$blue};
+    --theme: #{$dark-grey};
 
     // Other constants
     line-height: 140%;
     --nav-width: 120px;
     overflow-x: hidden;
-    background-color: var(--black);
-    color: var(--theme-secondary);
+//     background-color: var(--black);
+//     color: var(--grey);
 }
 
 
@@ -104,24 +104,6 @@ ul {
     padding-left: 30px;
 }
 
-
-// Cursor
-.custom-cursor {
-    position: fixed;
-    pointer-events: none;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: var(--theme);
-    z-index: 9999;
-    mix-blend-mode: difference;
-    transition: transform 0.3s ease; /* Add a smooth transition effect */
-
-
-    &.hover-h1 {
-        transform: scale(15);
-    }
-}
 
 
 // Handling mobile responsiveness

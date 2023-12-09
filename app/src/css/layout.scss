@@ -26,7 +26,7 @@ html.lenis { height: auto; }
             display: flex;
             text-decoration: none;
             font-size: 1.2rem;
-            color: var(--theme-secondary);
+            color: var(--dark-grey);
 
             .name {
                 margin-right: 5vw;
@@ -45,7 +45,7 @@ html.lenis { height: auto; }
             font-family: 'InterBold';
             color: var(--theme-secondary);
 
-            &.active { color: var(--theme); }
+            &.active { color: var(--dark-grey); }
         }
     }
 }
@@ -69,7 +69,7 @@ html.lenis { height: auto; }
 
         .anchor { 
             font-size: 16px;
-            color: var(--theme-secondary);
+            color: var(--theme);
         }
     }
 }
@@ -79,15 +79,28 @@ html.lenis { height: auto; }
     top: 0;
     right: 0;
     width: var(--nav-width);
-    height: 100vh;
+    height: 100%;
+    padding: var(--nav-width) 0;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: end;
     z-index: 100;
+
+    .social-links {
+        text-align: center;
+        position: relative;
+        left: 5px;
+
+        .anchor { 
+            font-size: 16px;
+            color: var(--dark-grey);
+        }
+    }
 }
 
 .app-container {
     z-index: 1;
+    mix-blend-mode: difference;
 }
 
 .botnav-placehold {

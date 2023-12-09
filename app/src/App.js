@@ -15,8 +15,8 @@ import "../src/css/layout.scss";
 import "../src/css/ucldiss.scss";
 
 // Component SCSS
-import "../src/css/anchor.scss";
-import "../src/css/title.scss";
+import "../src/css/components.scss";
+
 
 
 const AppRoute = () => {
