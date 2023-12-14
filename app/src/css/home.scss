@@ -1,63 +1,44 @@
 .homepage {
-    .landing-wrapper {
-        // Grid layout for overlapping content with different z-indexes.
-        // height: calc(100vh - var(--nav-width) * 2);
-        height: 100vh;
-        display: grid;
+    height: 150vh;
 
-        .landing-intro {
-            // Use grid-row = 1 and grid-column = 1 to perfectly overlap elements
-            height: 100vh;
-            grid-row: 1;
-            grid-column: 1;
-            z-index: 5;
-            padding: 0 15%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;
-            overflow: auto;
-            white-space: normal;
-            word-wrap: break-word;
-
-            .title {
-                width: 100%;
-                letter-spacing: 2px;
-                overflow: hidden;
-
-                &.name { padding-bottom: 5%; }
-            }
-        }
-
-    }
-
-    .about-wrapper {
-        height: 100vh;
+    .projects-nav {
+        padding: 5% 5% 0 0;
+        text-align: right;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        padding: 0 15%;
+        perspective: 400px;
 
-        .about-title {
-            letter-spacing: 2px;
-            overflow: hidden;
-        }
+        .project-link {
+            padding: 0;
+            display: inline-block !important;
+            line-height: 100% !important;
+            text-transform: uppercase;
+            transform-origin: right center;
+            transform: rotateY(-15deg) scale(0.8, 1);
+            transition: all .8s ease;
+            font-family: 'InterBlack';
+            color: var(--black);
 
-        .about-text {
-            padding-top: 5%;
-            color: var(--grey);
-            overflow: hidden;
-        }
-    }
-
-    .projects-wrapper {
-        height: 100vh;
-        padding: 10% 15%;
-
-        .projects-grid {
-            height: 100%;
-            display: flex;
-            grid-column-gap: 10px;
+            &:hover { transform: rotateY(-10deg)}
         }
     }
 }
+
+
+// Handling mobile responsiveness
+// Large Devices, Wide Screens
+@media only screen and (max-width: 1200px) {
+    .homepage { height: 100vh; }
+}
+
+// Medium Devices, Desktops
+@media only screen and (max-width: 992px) {}
+
+// Small Devices, Tablets
+@media only screen and (max-width: 768px) {}
+
+// Extra Small Devices, Phones 
+@media only screen and (max-width: 480px) {}
+
+// Custom, iPhone Retina
+@media only screen and (max-width : 320px) {}

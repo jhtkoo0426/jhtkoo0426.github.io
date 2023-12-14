@@ -8,48 +8,6 @@ html.lenis { height: auto; }
 
 
 // Navigation styling
-.topnav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: var(--nav-width);
-    display: flex;
-    flex-direction: row;
-    // align-items: center;
-    justify-content: space-between;
-    padding: 0 calc(var(--nav-width) / 2);
-    z-index: 100;
-
-    .home-button {
-        margin-top: calc(var(--nav-width) / 2);
-        a {
-            display: flex;
-            text-decoration: none;
-            font-size: 1.2rem;
-            color: var(--dark-grey);
-
-            .name {
-                margin-right: 5vw;
-                font-family: 'InterBold';
-            }
-        }
-    }
-
-    .topnav-menu {
-        margin-top: calc(var(--nav-width) / 2);
-
-        .topnav-link {
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            text-decoration: none;
-            font-family: 'InterBold';
-            color: var(--theme-secondary);
-
-            &.active { color: var(--dark-grey); }
-        }
-    }
-}
-
 .leftnav {
     position: fixed;
     top: 0;
@@ -101,13 +59,37 @@ html.lenis { height: auto; }
 .app-container {
     z-index: 1;
     mix-blend-mode: difference;
+
+    &.home { background-color: var(--theme); }
 }
 
-.botnav-placehold {
+.botnav {
     position: fixed;
-    top: calc(100vh - var(--nav-width));
-    bottom: 0;
     width: 100%;
     height: var(--nav-width);
+    top: calc(100vh - var(--nav-width) - 40px);
+    padding: 0 5%;
     z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    .nav-links {
+        .nav-icon { margin-bottom: 20px; }
+        .nav-info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 40px;
+        }
+
+        &.home {
+            .nav-info > p, .anchor { color: var(--white); }
+            .nav-icon > .title { color: var(--white); }
+        }
+    }
+
+    .social-links {
+        .anchor { font-family: 'InterBold'; }
+        &.home > .anchor { color: var(--white); }
+    }
 }

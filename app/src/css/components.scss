@@ -17,9 +17,9 @@
 
 // Styling for Title.js
 .title {
-    line-height: 120%;
+    line-height: 100%;
     font-family: 'AvertaBold';
-    overflow: auto;
+    overflow: hidden;
     white-space: normal;
     word-wrap: break-word;
     color: var(--dark-grey);
@@ -108,7 +108,16 @@
 
 // Handling mobile responsiveness
 // Large Devices, Wide Screens
-@media only screen and (max-width: 1200px) {}
+@media only screen and (max-width: 1200px) {
+    .title {
+        &.huge { font-size: 5.5rem; }
+        &.large { font-size: 3.5rem; }
+        &.medium { font-size: 2.75rem; }
+        &.standard { font-size: 20px; }
+        &.small { font-size: 15px; }
+        &.tiny { font-size: 1vw; }
+    }
+}
 
 // Medium Devices, Desktops
 @media only screen and (max-width: 992px) {}

@@ -1,25 +1,20 @@
 // Layout.js
 // Import core libraries
 import React, { useState, useEffect } from 'react';
-import { Outlet, Link, NavLink } from "react-router-dom";
+import { Outlet, Link, NavLink, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 
 // Import components
 import Anchor from "../components/Anchor";
+import CustomCursor from '../components/CustomCursor';
+import Title from '../components/Title';
 
 // Import SCSS files
 import "../css/layout.scss";
 import "../css/home.scss";
 
-// Other libraries
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import { faGithub, faLinkedinIn, faKaggle } from '@fortawesome/free-brands-svg-icons';
-
 // Smooth parallax scroll
 import Lenis from '@studio-freight/lenis'
-
-import CustomCursor from '../components/CustomCursor';
 
 
 
@@ -31,41 +26,52 @@ const Layout = () => {
         requestAnimationFrame(raf)
     }
     requestAnimationFrame(raf)
-    
-    const [scrollPosition, setScrollPosition] = useState(0);
+
+    // Get relative URL
+    const location = useLocation();
+    const [isHome, setIsHome] = useState(false);
+
+    useEffect(() => {
+      setIsHome(location.pathname === '/');
+      console.log(isHome)
+    }, [isHome, location.pathname])
 
     return (
         <>
           <CustomCursor />
-          <motion.nav className="topnav" initial={{ opacity: 0, y: -50}} animate={{ opacity: 1, y: 0, transition: { delay: 0.25} }}>
-            <div className="home-button">
-              <Link to={"/"}>
-                <p className="name"></p>
-              </Link>
-            </div>
-          </motion.nav>
-          <div className="rightnav">
-            <div className='social-links'>
-              <Anchor target={true} underline={false} href={"https://www.linkedin.com/in/koo-justin/"}>
-                <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
-              </Anchor>
-              <Anchor target={true} underline={false} href={"https://github.com/jhtkoo0426"}>
-                <FontAwesomeIcon icon={faLinkedinIn}></FontAwesomeIcon>
-              </Anchor>
-              <Anchor target={true} underline={false} href={"https://www.kaggle.com/jhtkoo0426"}>
-                <FontAwesomeIcon icon={faKaggle}></FontAwesomeIcon>
-              </Anchor>
-              {/* <Anchor href={"mailto:jhtkbusiness@gmail.com"} target={true} underline={false}>
-                <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>
-              </Anchor> */}
-            </div>
-          </div>
-          <div className="app-container">
+          <div className="rightnav"></div>
+          <div className={`app-container ${isHome ? 'home' : ''}`}>
             {/* Container for the main content of the portfolio */}
             <div className="main-container"><Outlet /></div>
           </div>
-          <div className='botnav-placehold'>
-            
+          <div className={`botnav ${isHome ? 'home' : ''}`}>
+            <div className={`nav-links ${isHome ? 'home' : ''}`}>
+              <Link className='anchor nav-icon' to='/'>
+                <Title font='averta' text_transform='upper' size='medium'>
+                  justin koo.
+                </Title>
+              </Link>
+              <div className='nav-info'>
+                <p>Web portfolio of Justin Koo</p>
+                <p>London, UK | Hong Kong</p>
+                <p>Data Analyst</p>
+                <Anchor href={"mailto:justinkoo426@gmail.com"} target={true} underline={false}>
+                  justinkoo426@gmail.com
+                </Anchor>
+              </div>
+            </div>
+            <div className={`social-links ${isHome ? 'home': ''}`}>
+                <Anchor target={true} underline={false} href={"https://www.linkedin.com/in/koo-justin/"}>
+                  linkedin
+                </Anchor>
+                <Anchor target={true} underline={false} href={"https://github.com/jhtkoo0426"}>
+                  github
+                </Anchor>
+                <Anchor target={true} underline={false} href={"https://www.kaggle.com/jhtkoo0426"}>
+                  kaggle
+                </Anchor>
+                
+              </div>
           </div>
         </>
     );
