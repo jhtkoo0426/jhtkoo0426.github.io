@@ -74,7 +74,7 @@ html.lenis { height: auto; }
     justify-content: space-between;
     align-items: end;
 
-    .nav-links {
+    .nav-links-left {
         .nav-icon { margin-bottom: 20px; }
         .nav-info {
             display: grid;
@@ -85,6 +85,16 @@ html.lenis { height: auto; }
         &.home {
             .nav-info > p, .anchor { color: var(--white); }
             .nav-icon > .title { color: var(--white); }
+        }
+    }
+
+    .nav-links-right {
+        display: flex;
+        grid-column-gap: 40px;
+
+        .general-nav-links > .anchor {
+            font-family: 'InterBold';
+            color: var(--white);
         }
     }
 

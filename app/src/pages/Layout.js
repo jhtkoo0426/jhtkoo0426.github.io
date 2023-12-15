@@ -45,7 +45,7 @@ const Layout = () => {
             <div className="main-container"><Outlet /></div>
           </div>
           <div className={`botnav ${isHome ? 'home' : ''}`}>
-            <div className={`nav-links ${isHome ? 'home' : ''}`}>
+            <div className={`nav-links-left ${isHome ? 'home' : ''}`}>
               <Link className='anchor nav-icon' to='/'>
                 <Title font='averta' text_transform='upper' size='medium'>
                   justin koo.
@@ -60,18 +60,22 @@ const Layout = () => {
                 </Anchor>
               </div>
             </div>
-            <div className={`social-links ${isHome ? 'home': ''}`}>
-                <Anchor target={true} underline={false} href={"https://www.linkedin.com/in/koo-justin/"}>
-                  linkedin
-                </Anchor>
-                <Anchor target={true} underline={false} href={"https://github.com/jhtkoo0426"}>
-                  github
-                </Anchor>
-                <Anchor target={true} underline={false} href={"https://www.kaggle.com/jhtkoo0426"}>
-                  kaggle
-                </Anchor>
-                
+            <div className='nav-links-right'>
+              <div className={`general-nav-links ${isHome ? 'home': ''}`}>
+                <Link className='anchor' to="">about</Link>
               </div>
+              <div className={`social-links ${isHome ? 'home': ''}`}>
+                  <Anchor target={true} underline={false} href={"https://www.linkedin.com/in/koo-justin/"}>
+                    linkedin
+                  </Anchor>
+                  <Anchor target={true} underline={false} href={"https://github.com/jhtkoo0426"}>
+                    github
+                  </Anchor>
+                  <Anchor target={true} underline={false} href={"https://www.kaggle.com/jhtkoo0426"}>
+                    kaggle
+                  </Anchor>
+              </div>
+            </div>
           </div>
         </>
     );

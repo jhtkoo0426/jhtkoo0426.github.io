@@ -26,7 +26,7 @@ const AppRoute = () => {
       <Route path="/" element={<Layout/>}>
         <Route path="/" index element={<Home/>} />
         <Route path="/work" element={<Work/>} />
-        <Route path="/ucl" element={<UCLdiss/>} />
+        <Route path="/ucldiss" element={<UCLdiss/>} />
       </Route>
     </Routes>
   );

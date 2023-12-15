@@ -6,9 +6,9 @@ import { Link } from "react-router-dom";
 import Title from "./Title";
 
 
-const ProjectLink = ({ id, year, project_title, href }) => {
+const ProjectLink = ({ id, year, project_title, href, external }) => {
     return (
-        <Link className='anchor project-link' to={href}>
+        <Link className='anchor project-link' to={href} target={external === true ? '_blank' : '_self'}>
             <p className='year'>{year}</p>
             <div className='slash'></div>
             <Title size='huge' text_transform='upper' font='avertabold'>{project_title}</Title>
