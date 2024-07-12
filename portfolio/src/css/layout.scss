@@ -4,6 +4,13 @@
     scroll-behavior: smooth;
 }
 
+:root {
+    --white: #fff;
+    --grey: #c5c3c3;
+    --more-grey: #949393;
+    --dark-bg: #060A08;
+}
+
 // Webfonts
 @font-face {
     font-family: 'Averta';
@@ -90,3 +97,95 @@
     font-family: 'RobotoBold';
     src: url("../fonts/Roboto/Roboto-Bold.ttf");
 }
+
+// Lenis configs
+html.lenis, html.lenis body {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+    pointer-events: none;
+}
+
+
+.app-container {
+    padding: 5vh 30vw;
+    background-color: var(--dark-bg);
+    color: var(--light);
+    font-family: 'Inter';
+    line-height: 1.75rem;
+    color: var(--grey);
+
+    .icon { 
+        margin-bottom: 60px;
+        font-family: 'Poppins';
+        color: var(--more-grey);
+    }
+
+    .intro {
+        font-size: 0.8rem;
+        padding-bottom: 10px;
+        color: var(--more-grey);
+    }
+
+    p {
+        span {
+            color: var(--white);
+            &.highlight { color: #21c5a1;}
+        }
+    }
+
+    .scroll-container {
+        .title {
+            margin-bottom: 5vh;
+            font-family: 'Poppins';
+            font-size: 1.2rem;
+        }
+    }
+
+    .botnav {
+        border-top: 1px solid var(--grey);
+        margin-top: 60px;
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.9rem;
+        color: var(--more-grey);
+
+        .socials {
+            display: flex;
+
+            a {
+                padding-left: 15px;
+                color: var(--more-grey);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .app-container {
+        padding: 5vh 15vw;
+    }
+}
+
+@media only screen and (max-width: 992px) {}
+
+@media only screen and (max-width: 768px) {}
+
+@media only screen and (max-width: 480px) {}
+
+@media only screen and (max-width : 320px) {}

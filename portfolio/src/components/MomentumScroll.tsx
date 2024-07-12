@@ -15,7 +15,7 @@ const MomentumScroll = ({ children }: MomentumScrollProps): JSX.Element => {
     const resizeScrollableHeight = useCallback(
         (entries: ResizeObserverEntry[]) => {
             for (let entry of entries) {
-            setScrollableHeight(entry.contentRect.height);
+                setScrollableHeight(entry.contentRect.height);
             }
         }, []
     );
@@ -43,16 +43,16 @@ const MomentumScroll = ({ children }: MomentumScrollProps): JSX.Element => {
     const springNegativeScrollY = useSpring(negativeScrollY, springPhysics);
 
     return (
-    <>
-        <motion.div
-        ref={scrollRef}
-        style={{ y: springNegativeScrollY }}
-        className="scroll-container">
-        {children}
-        </motion.div>
+        <>
+            <motion.div
+                ref={scrollRef}
+                style={{ y: springNegativeScrollY }}
+                className="scroll-container">
+                {children}
+            </motion.div>
 
-        <div style={{ height: scrollableHeight }} />
-    </>
+            <div style={{ height: scrollableHeight * 0.8 }} />
+        </>
     );
 };
 
