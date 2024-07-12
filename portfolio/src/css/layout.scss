@@ -3,3 +3,90 @@
     padding: 0;
     scroll-behavior: smooth;
 }
+
+// Webfonts
+@font-face {
+    font-family: 'Averta';
+    src: url("../fonts/Averta/averta-regular.otf");
+}
+
+@font-face {
+    font-family: 'AvertaBold';
+    src: url("../fonts/Averta/averta-bold.otf");
+}
+
+@font-face {
+    font-family: 'InterReg';
+    src: url("../fonts/Inter/static/Inter-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'InterBold';
+    src: url("../fonts/Inter/static/Inter-Bold.ttf");
+}
+
+@font-face {
+    font-family: 'InterBlack';
+    src: url("../fonts/Inter/static/Inter-Black.ttf");
+}
+
+@font-face {
+    font-family: 'InterThin';
+    src: url("../fonts/Inter/static/Inter-Thin.ttf");
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../fonts/Montserrat/static/Montserrat-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'MontserratBold';
+    src: url("../fonts/Montserrat/static/Montserrat-Bold.ttf");
+}
+
+@font-face {
+    font-family: 'NotoSans';
+    src: url("../fonts/Noto_Sans_JP/static/NotoSansJP-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'NotoSansBold';
+    src: url("../fonts/Noto_Sans_JP/static/NotoSansJP-Bold.ttf");
+}
+
+@font-face {
+    font-family: 'Playfair';
+    src: url("../fonts/Playfair/static/PlayfairDisplay-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'PlayfairBold';
+    src: url("../fonts/Playfair/static/PlayfairDisplay-Bold.ttf");
+}
+
+@font-face {
+    font-family: 'PlayfairItalic';
+    font-weight: 100;
+    src: url("../fonts/Playfair/static/PlayfairDisplay-Italic.ttf");
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url("../fonts/Poppins/Poppins-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'PoppinsBold';
+    src: url("../fonts/Poppins/Poppins-Bold.ttf");
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url("../fonts/Roboto/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'RobotoBold';
+    src: url("../fonts/Roboto/Roboto-Bold.ttf");
+}
