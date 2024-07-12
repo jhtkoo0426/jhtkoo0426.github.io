@@ -1,20 +1,13 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
 import { motion } from "framer-motion";
-import Lenis from 'lenis';
+import MomentumScroll from './MomentumScroll';
+
+// Styling
+import "../css/layout.scss";
 
 
 const Layout = ({ pageTitle, children }) => {
-  // Smooth scroll with Lenis
-  const lenis = new Lenis()
-
-  function raf(time) {
-    lenis.raf(time)
-    requestAnimationFrame(raf)
-  }
-
-  requestAnimationFrame(raf)
-
   return (
     <div>
       <nav>
@@ -23,10 +16,12 @@ const Layout = ({ pageTitle, children }) => {
           <li><Link to="/about">About</Link></li>
         </ul>
       </nav>
-      <main>
-        <h1>{pageTitle}</h1>
-        {children}
-      </main>
+      <MomentumScroll>
+        <main>
+          <h1>{pageTitle}</h1>
+          {children}
+        </main>
+      </MomentumScroll>
     </div>
   )
 }
