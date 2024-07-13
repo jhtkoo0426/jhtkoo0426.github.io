@@ -10,16 +10,14 @@ import { Link } from 'gatsby';
 
 const Layout = ({ pageTitle, children }) => {
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const lenis = new Lenis()
+    const lenis = new Lenis()
 
-      function raf(time) {
-        lenis.raf(time)
-        requestAnimationFrame(raf)
-      }
-
+    function raf(time) {
+      lenis.raf(time)
       requestAnimationFrame(raf)
     }
+
+    requestAnimationFrame(raf)
   }, []);
 
   return (
