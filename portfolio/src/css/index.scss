@@ -2,7 +2,30 @@
     padding: 50px 0 25px 0;
     font-family: 'Inter';
     font-size: 1.4rem;
+    color: var(--grey);
+}
+
+.project-title {
+    padding: 50px 0 25px 0;
+    font-family: 'Inter';
+    font-size: 1.6rem;
     color: var(--white);
+}
+
+.links {
+    a {
+        padding-right: 10px;
+        color: var(--more-grey);
+    }
+}
+
+video {
+    width: 100%;
+    margin: 5vh 0 3vh 0;
+}
+
+ul {
+    padding-left: 18px;
 }
 
 .projects-grid {

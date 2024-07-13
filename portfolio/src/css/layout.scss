@@ -9,6 +9,7 @@
     --grey: #c5c3c3;
     --more-grey: #949393;
     --dark-bg: #060A08;
+    --distinct: #21c5a1;
 }
 
 // Webfonts
@@ -131,7 +132,11 @@ html.lenis, html.lenis body {
     .icon { 
         margin-bottom: 60px;
         font-family: 'Poppins';
-        color: var(--more-grey);
+
+        a {
+            text-decoration: none;
+            color: var(--more-grey);
+        }
     }
 
     .intro {
@@ -140,11 +145,13 @@ html.lenis, html.lenis body {
         color: var(--more-grey);
     }
 
-    p {
-        span {
-            color: var(--white);
-            &.highlight { color: #21c5a1;}
-        }
+    span {
+        color: var(--white);
+        &.highlight { color: var(--distinct);}
+    }
+
+    a {
+        &.highlight { color: var(--distinct);}
     }
 
     .scroll-container {

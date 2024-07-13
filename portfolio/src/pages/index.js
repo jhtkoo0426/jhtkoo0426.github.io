@@ -1,7 +1,5 @@
 import * as React from 'react';
 import Layout from '../components/layout';
-import { Link } from 'gatsby';
-import CustomLink from '../components/CustomLink';
 
 // Styling
 import "../css/index.scss";
@@ -33,6 +31,7 @@ const IndexPage = () => {
           projectName={'Route Finder'}
           description={'Visualizing path-finding processes between TfL metro stations'}
           image={routeFinder}
+          projectLink={'routefinder'}
         />
         <MinimalShowcase
           projectName={'Portfolio'}

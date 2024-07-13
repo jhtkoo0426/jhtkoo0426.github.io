@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'gatsby';
-import { motion } from 'framer-motion';
 import ClockAPI from './Clock';
 import Lenis from 'lenis';
 import CustomCursor from "./Cursor";
@@ -8,6 +6,7 @@ import { CursorProvider } from './CursorContext';
 
 // Styling
 import "../css/layout.scss";
+import { Link } from 'gatsby';
 
 
 const Layout = ({ pageTitle, children }) => {
@@ -24,7 +23,9 @@ const Layout = ({ pageTitle, children }) => {
     <CursorProvider>
       <CustomCursor />
       <div className='app-container'>
-        <p className='icon'>justin</p>
+        <p className='icon'>
+          <Link to='/'>justin</Link>
+        </p>
         <p className='intro'>IPA /ʤʌstɪn/ | Life-Long Learning</p>
         <p>{pageTitle}</p>
         <main>
