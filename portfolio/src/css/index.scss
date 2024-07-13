@@ -13,6 +13,8 @@
     .showcase {
         line-height: 1.5rem;
 
+        a { color: var(--grey); }
+
         .proj-name {
             position: relative;
             display: inline-block;
@@ -42,6 +44,7 @@
         justify-content: space-between;
 
         p {
+            padding-bottom: 5px;
             font-size: 0.9rem;
             color: var(--more-grey);
         }

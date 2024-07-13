@@ -1,10 +1,14 @@
-import * as React from 'react'
-import Layout from '../components/layout'
-import { Link } from 'gatsby'
+import * as React from 'react';
+import Layout from '../components/layout';
+import { Link } from 'gatsby';
+import CustomLink from '../components/CustomLink';
 
 // Styling
 import "../css/index.scss";
 import MinimalShowcase from '../components/MinimalShowcase';
+
+// Media
+import routeFinder from "../images/route-finder-closeup.png";
 
 
 const IndexPage = () => {
@@ -28,6 +32,7 @@ const IndexPage = () => {
         <MinimalShowcase
           projectName={'Route Finder'}
           description={'Visualizing path-finding processes between TfL metro stations'}
+          image={routeFinder}
         />
         <MinimalShowcase
           projectName={'Portfolio'}
@@ -51,15 +56,15 @@ const IndexPage = () => {
       <div className='experiences'>
         <div className='experience'>
           <p>Data Engineer - Freelance</p>
-          <p>09/2023 - 06/2024</p>
+          <p>Sept 2023 - June 2024</p>
         </div>
         <div className='experience'>
           <p>Systems Engineer - NHS</p>
-          <p>10/2021 - 04/2022</p>
+          <p>Oct 2021 - Apr 2022</p>
         </div>
         <div className='experience'>
           <p>Business Analyst - Look4SchoolsUK Ltd.</p>
-          <p>04/2020 - 04/2022</p>
+          <p>Apr 2020 - Apr 2022</p>
         </div>
       </div>
     </Layout>
