@@ -1,6 +1,5 @@
 import * as React from 'react';
 import Layout from '../components/layout';
-import route_finder_screenshot from '../images/route-finder-screenshot.png';
 import route_finder_vid from '../videos/route-finder-demo.mp4';
 
 

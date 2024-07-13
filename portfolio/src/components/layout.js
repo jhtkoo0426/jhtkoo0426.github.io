@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import ClockAPI from './Clock';
+import React, { useEffect } from 'react';
 import Lenis from 'lenis';
 import CustomCursor from "./Cursor";
 import { CursorProvider } from './CursorContext';
@@ -10,14 +9,18 @@ import { Link } from 'gatsby';
 
 
 const Layout = ({ pageTitle, children }) => {
-  const lenis = new Lenis()
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const lenis = new Lenis()
 
-  function raf(time) {
-    lenis.raf(time)
-    requestAnimationFrame(raf)
-  }
+      function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+      }
 
-  requestAnimationFrame(raf)
+      requestAnimationFrame(raf)
+    }
+  }, []);
 
   return (
     <CursorProvider>
