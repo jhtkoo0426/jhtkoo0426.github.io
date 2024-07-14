@@ -45,13 +45,11 @@ const MomentumScroll = ({ children }: MomentumScrollProps): JSX.Element => {
     return (
     <>
         <motion.div
-        ref={scrollRef}
-        style={{ y: springNegativeScrollY }}
-        className="scroll-container">
-        {children}
+            ref={scrollRef}
+            style={{ y: springNegativeScrollY }}
+            className="scroll-container">
+            {children}
         </motion.div>
-
-        <div style={{ height: scrollableHeight }} />
     </>
     );
 };

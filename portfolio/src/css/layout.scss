@@ -1,92 +1,87 @@
-* {
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
-}
+.layout-container {
+    position: relative;
+    padding: 0 var(--padding-lr);
+    background-color: var(--bg-dark-color);
 
-// Webfonts
-@font-face {
-    font-family: 'Averta';
-    src: url("../fonts/Averta/averta-regular.otf");
-}
+    .topnav {
+        position: fixed;
+        width: calc(100% - var(--padding-lr) * 2);
+        height: 120px;
+        left: var(--padding-lr);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: transparent;
+        z-index: var(--topnav-zindex);
+        
+        .left-content {
+            display: flex;
+            align-items: center;
+            gap: 20px;
 
-@font-face {
-    font-family: 'AvertaBold';
-    src: url("../fonts/Averta/averta-bold.otf");
-}
+            .icon {
+                border-radius: 6px;
+                padding: 1px;
+                text-align: center;
+                background-color: var(--topnav-icon-bg-color);
+    
+                .icon-inner {
+                    padding: 1px 0;
+                    border: 2px solid var(--bg-dark-color);
+                    border-radius: 6px;
+    
+                    p {
+                        font-family: 'chin';
+                        color: var(--bg-dark-color);
+        
+                        &.cn-last-name {
+                            font-size: 1.8rem;
+                            line-height: 2rem;
+                        }
+        
+                        &.cn-first-name {
+                            font-size: 0.8rem;
+                        }
+                    }
+                }
+            }
+    
+            .en-name {
+                p {
+                    &.name {
+                        font-family: 'Inter';
+                        font-size: 1.2rem;
+                        color: var(--bg-light-color);
+                    }
 
-@font-face {
-    font-family: 'InterReg';
-    src: url("../fonts/Inter/static/Inter-Regular.ttf");
-}
+                    &.title {
+                        padding-top: 3px;
+                        font-family: 'Manrope';
+                        font-size: 0.75rem;
+                        color: var(--topnav-icon-title-color);
+                    }
+                }
+            }
+        }
 
-@font-face {
-    font-family: 'InterBold';
-    src: url("../fonts/Inter/static/Inter-Bold.ttf");
-}
+        .socials {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
 
-@font-face {
-    font-family: 'InterBlack';
-    src: url("../fonts/Inter/static/Inter-Black.ttf");
-}
+            a {
+                padding: 7px 11px;
+                border-radius: 10px;
+                text-decoration: none;
+                font-family: 'Inter';
+                font-size: 0.85rem;
+                color: var(--bg-light-color);
 
-@font-face {
-    font-family: 'InterThin';
-    src: url("../fonts/Inter/static/Inter-Thin.ttf");
-}
-
-@font-face {
-    font-family: 'Montserrat';
-    src: url("../fonts/Montserrat/static/Montserrat-Regular.ttf");
-}
-
-@font-face {
-    font-family: 'MontserratBold';
-    src: url("../fonts/Montserrat/static/Montserrat-Bold.ttf");
-}
-
-@font-face {
-    font-family: 'NotoSans';
-    src: url("../fonts/Noto_Sans_JP/static/NotoSansJP-Regular.ttf");
-}
-
-@font-face {
-    font-family: 'NotoSansBold';
-    src: url("../fonts/Noto_Sans_JP/static/NotoSansJP-Bold.ttf");
-}
-
-@font-face {
-    font-family: 'Playfair';
-    src: url("../fonts/Playfair/static/PlayfairDisplay-Regular.ttf");
-}
-
-@font-face {
-    font-family: 'PlayfairBold';
-    src: url("../fonts/Playfair/static/PlayfairDisplay-Bold.ttf");
-}
-
-@font-face {
-    font-family: 'PlayfairItalic';
-    font-weight: 100;
-    src: url("../fonts/Playfair/static/PlayfairDisplay-Italic.ttf");
-}
-
-@font-face {
-    font-family: 'Poppins';
-    src: url("../fonts/Poppins/Poppins-Regular.ttf");
-}
-
-@font-face {
-    font-family: 'PoppinsBold';
-    src: url("../fonts/Poppins/Poppins-Bold.ttf");
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url("../fonts/Roboto/Roboto-Regular.ttf");
-}
-
-@font-face {
-    font-family: 'RobotoBold';
-    src: url("../fonts/Roboto/Roboto-Bold.ttf");
+                &:hover {
+                    background-color: var(--dark-grey);
+                }
+            }
+        }
+    }
 }
