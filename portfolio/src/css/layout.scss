@@ -8,7 +8,7 @@
     --white: #fff;
     --grey: #c5c3c3;
     --more-grey: #949393;
-    --dark-bg: #060A08;
+    --dark-bg: #1d1f1d;
     --distinct: #21c5a1;
 }
 
@@ -24,7 +24,7 @@
 }
 
 @font-face {
-    font-family: 'InterReg';
+    font-family: 'Inter';
     src: url("../fonts/Inter/static/Inter-Regular.ttf");
 }
 
@@ -36,6 +36,11 @@
 @font-face {
     font-family: 'InterBlack';
     src: url("../fonts/Inter/static/Inter-Black.ttf");
+}
+
+@font-face {
+    font-family: 'InterLight';
+    src: url("../fonts/Inter/static/Inter-Light.ttf");
 }
 
 @font-face {
@@ -97,6 +102,11 @@
 @font-face {
     font-family: 'RobotoBold';
     src: url("../fonts/Roboto/Roboto-Bold.ttf");
+}
+
+@font-face {
+    font-family: 'RobotoMono';
+    src: url("../fonts/Roboto_Mono/static/RobotoMono-Regular.ttf");
 }
 
 // Lenis configs
@@ -170,6 +180,7 @@ html.lenis, html.lenis body {
         justify-content: space-between;
         align-items: center;
         font-size: 0.9rem;
+        font-family: 'Inter';
         color: var(--more-grey);
 
         .socials {

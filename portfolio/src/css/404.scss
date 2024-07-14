@@ -1,0 +1,22 @@
+.container-404 {
+    height: calc(100vh - 10vw);
+    padding: 5vw;
+    background-color: var(--dark-bg);
+    color: var(--light);
+
+    .icon { 
+        margin-bottom: 60px;
+
+        a {
+            text-decoration: none;
+            font-family: 'Poppins';
+            color: var(--more-grey);
+        }
+    }
+
+    .message {
+        font-family: 'InterLight';
+        font-size: 3.5vw;
+        color: white;
+    }
+}

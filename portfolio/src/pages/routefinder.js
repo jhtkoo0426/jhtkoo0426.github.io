@@ -71,5 +71,5 @@ const RouteFinderPage = () => {
 }
 
 
-export const Head = () => <title>Justin Koo</title>
+export const Head = () => <title>Justin Koo - Portfolio</title>
 export default RouteFinderPage

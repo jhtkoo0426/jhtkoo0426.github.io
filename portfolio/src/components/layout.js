@@ -27,7 +27,6 @@ const Layout = ({ pageTitle, children }) => {
         <p className='icon'>
           <Link to='/'>justin</Link>
         </p>
-        <p className='intro'>IPA /ʤʌstɪn/ | Life-Long Learning</p>
         <p>{pageTitle}</p>
         <main>
           {children}

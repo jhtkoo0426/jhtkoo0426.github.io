@@ -12,6 +12,7 @@ import routeFinder from "../images/route-finder-closeup.png";
 const IndexPage = () => {
   return (
     <Layout pageTitle="">
+      <p className='intro'>IPA /ʤʌstɪn/ | Life-Long Learning</p>
       <p>Hi there, I'm <span className='highlight'>Justin</span>. I'm a CS graduate 
       from <span>University College London</span>. I'm originally from <span>Hong 
       Kong</span>, and am currently based in <span>London, UK</span>. I 
