@@ -37,6 +37,6 @@ module.exports = {
         icon: `src/images/page-icon.png`,
       },
     },
-    `gatsby-plugin-sass`
+    `gatsby-plugin-sass`,
   ],
 }
