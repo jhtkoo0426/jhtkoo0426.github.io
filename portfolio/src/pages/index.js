@@ -19,18 +19,19 @@ const IndexPage = () => {
       like <span>building stuff</span> and <span>trying new things</span>, and 
       recently fell in love with exploring <span>fintech</span>.</p>
       <br></br>
-      <p>Right now I'm developing <span>Lumin</span>, a <span>systematic trading system</span> focused
-      on <span>equities trading</span>.</p>
+      <p>I'm looking for a full-time software engineering role, ideally in the finance
+        industry. In the meantime, I'm developing my passion project <span>Lumin</span>, an <span>automated trading system</span> focused
+      on <span>trading equities and equity derivatives</span>.</p>
 
       <h1 className='section-title'>Projects</h1>
       <div className='projects-grid'>
         <MinimalShowcase 
           projectName={'Lumin'}
-          description={'A future money tree (hopefully)'}
+          description={'Trading system, fingers crossed it prints money in the future'}
         />
         <MinimalShowcase
           projectName={'Route Finder'}
-          description={'Visualizing path-finding processes between TfL metro stations'}
+          description={'Visualizing path-finding processes between London metro stations'}
           image={routeFinder}
           projectLink={'routefinder'}
         />
@@ -48,7 +49,7 @@ const IndexPage = () => {
         />
         <MinimalShowcase
           projectName={'Epidemic Simulation'}
-          description={'Interactive web-based simulation of epidemics'}
+          description={'Interactive web-based simulation of epidemics and human behaviour'}
         />
       </div>
 
