@@ -1,0 +1,49 @@
+.left-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .icon {
+        border-radius: 6px;
+        padding: 1px;
+        text-align: center;
+        background-color: var(--topnav-icon-bg-color);
+
+        .icon-inner {
+            padding: 1px 0;
+            border: 2px solid var(--bg-dark-color);
+            border-radius: 6px;
+
+            p {
+                font-family: 'chin';
+                color: var(--bg-dark-color);
+
+                &.cn-last-name {
+                    font-size: 1.8rem;
+                    line-height: 2rem;
+                }
+
+                &.cn-first-name {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+
+    .en-name {
+        p {
+            &.name {
+                font-family: 'Inter';
+                font-size: 1.2rem;
+                color: var(--bg-light-color);
+            }
+
+            &.title {
+                padding-top: 3px;
+                font-family: 'Manrope';
+                font-size: 0.75rem;
+                color: var(--topnav-icon-title-color);
+            }
+        }
+    }
+}
