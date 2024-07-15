@@ -5,6 +5,7 @@ import MomentumScroll from './MomentumScroll';
 
 // Styling
 import "../css/app.scss";
+import "../css/components.scss";
 import "../css/layout.scss";
 
 

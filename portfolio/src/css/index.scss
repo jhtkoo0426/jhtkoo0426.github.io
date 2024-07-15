@@ -1,0 +1,49 @@
+.about {
+    .greet-text {
+        display: flex;
+        align-items: center;
+        height: 5.5rem;
+        padding-bottom: 5px;
+        font: 4.5rem 'Inter';
+        color: var(--mono-white);
+
+        &.en {
+            font-family: 'Inter';
+        }
+
+        &.cn {
+            font: 4rem 'NotoSansTC';
+        }
+
+        &.jp {
+            position: relative;
+            left: -5px;
+            font: 4rem 'NotoSansJP';
+        }
+    }
+
+    .greet {
+        padding-bottom: 5vh;
+        
+        .intro {
+            padding-top: 5vh;
+        }
+
+        .desc {
+            width: 70%;
+            font-family: 'Inter';
+            line-height: 1.7rem;
+            font-size: 1rem;
+            color: var(--mono-white);
+        }
+    }
+}
+
+.work {
+    // padding: var(--padding-lr);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 15px;
+    background-color: var(--mono-black);
+}

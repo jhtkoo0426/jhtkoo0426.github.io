@@ -6,13 +6,11 @@
 }
 
 :root {
-    --bg-dark-color: #101010;
-    --bg-light-color: #fff;
-    --dark-grey: #222222;
-    --topnav-icon-bg-color: #fff;
-    --topnav-icon-title-color: #a5a5a5;
+    --mono-black: #101010;
+    --mono-white: #fff;
+    --mono-light-grey: #a0a0a0;
+    --mono-dark-grey: #222222;
     --padding-lr: 48px;
-
     --topnav-zindex: 1000;
 }
 
@@ -68,13 +66,23 @@
 }
 
 @font-face {
-    font-family: 'NotoSans';
+    font-family: 'NotoSansJP';
     src: url("../fonts/Noto_Sans_JP/static/NotoSansJP-Regular.ttf");
 }
 
 @font-face {
-    font-family: 'NotoSansBold';
+    font-family: 'NotoSansJPBold';
     src: url("../fonts/Noto_Sans_JP/static/NotoSansJP-Bold.ttf");
+}
+
+@font-face {
+    font-family: 'NotoSansTC';
+    src: url("../fonts/Noto_Sans_TC/static/NotoSansTC-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'NotoSansTCBold';
+    src: url("../fonts/Noto_Sans_TC/static/NotoSansTC-Bold.ttf");
 }
 
 @font-face {
@@ -118,8 +126,13 @@
     src: url("../fonts/Roboto/Roboto-Thin.ttf");
 }
 
+@font-face {
+    font-family: 'RobotoMono';
+    src: url("../fonts/Roboto_Mono/static/RobotoMono-Regular.ttf");
+}
 
 @font-face {
     font-family: 'chin';
     src: url("../fonts/BaiZhouZhuanShu.ttf");
 }
+

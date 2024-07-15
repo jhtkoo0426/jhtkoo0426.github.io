@@ -14,7 +14,11 @@ const AlternatingText = ({ interval = 1000, children }) => {
     return () => clearInterval(intervalId);
   }, [texts, interval]);
 
-  return <div>{texts[currentIndex]}</div>;
+  return (
+    <div className='alternating-text'>
+      {texts[currentIndex]}
+    </div>
+  );
 };
 
 
