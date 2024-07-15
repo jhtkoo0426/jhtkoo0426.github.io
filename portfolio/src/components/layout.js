@@ -35,8 +35,8 @@ const Layout = ({ pageTitle, children }) => {
           <p>Justin Koo @ 2024</p>
           <div className='socials'>
             <p>Contact: </p>
-            <a href='https://www.linkedin.com/in/koo-justin/' target='_blank'>LinkedIn</a>
-            <a href='https://github.com/jhtkoo0426/' target='_blank'>GitHub</a>
+            <a href='https://www.linkedin.com/in/koo-justin/' target='_blank' rel='noreferrer'>LinkedIn</a>
+            <a href='https://github.com/jhtkoo0426/' target='_blank' rel='noreferrer'>GitHub</a>
           </div>
         </nav>
       </div>

@@ -12,8 +12,8 @@ const RouteFinderPage = () => {
         Underground stations.</p>
       <br></br>
       <div className='links'>
-        <a href='https://jhtkoo0426.github.io/route-finder/' target='_blank'>Project Website</a>
-        <a href='https://github.com/jhtkoo0426/route-finder/tree/main' target='_blank'>GitHub Repo</a>
+        <a href='https://jhtkoo0426.github.io/route-finder/' target='_blank' rel='noreferrer'>Project Website</a>
+        <a href='https://github.com/jhtkoo0426/route-finder/tree/main' target='_blank' rel='noreferrer'>GitHub Repo</a>
       </div>
       <video src={route_finder_vid} autoPlay loop muted></video>
 
@@ -64,8 +64,7 @@ const RouteFinderPage = () => {
         adaptable system.</p>
       <br></br>
       <p>For details, please refer to the documentation for the application at 
-        the <a className='highlight' href='https://github.com/jhtkoo0426/route-finder/tree/main' target='_blank'>github page</a>.</p>
-      <h1></h1>
+        the <a className='highlight' href='https://github.com/jhtkoo0426/route-finder/tree/main' target='_blank' rel='noreferrer'>github page</a>.</p>
     </Layout>
   )
 }

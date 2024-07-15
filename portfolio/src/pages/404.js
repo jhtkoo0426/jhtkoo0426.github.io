@@ -1,5 +1,4 @@
 import * as React from "react"
-import Layout from "../components/layout"
 import { motion } from "framer-motion"
 import { Link } from "gatsby";
 import Seo from "../components/seo"

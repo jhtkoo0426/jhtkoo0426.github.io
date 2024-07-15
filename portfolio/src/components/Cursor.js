@@ -27,7 +27,7 @@ const CustomCursor = () => {
       className={`custom-cursor ${hovering ? 'hovering' : ''}`}
       style={{ top: `${position.y}px`, left: `${position.x}px` }}
     >
-      {hovering && <img src={hovering} alt="cursor-image" />}
+      {hovering && <img src={hovering} alt="cursor-img" />}
     </div>
   );
 };
