@@ -53,7 +53,7 @@ const IndexPage = () => {
         />
       </div>
 
-      <h1 className='section-title'>Experience</h1>
+      <h1 className='section-title'>Experiences</h1>
       <div className='experiences'>
         <div className='experience'>
           <p>Data Engineer - Freelance</p>

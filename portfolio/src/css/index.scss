@@ -73,3 +73,29 @@ ul {
         }
     }
 }
+
+
+// Mobile responsiveness
+@media only screen and (max-width: 480px) {
+    .projects-grid {
+        display: block;
+        
+        .showcase {
+            padding-bottom: 10px;
+        }
+    }
+
+    .experiences {
+        .experience {
+            display: block;
+            padding-bottom: 10px;
+            p {
+                padding-bottom: 0;
+                line-height: 1.2rem;
+                &:nth-child(1) {
+                    color: var(--grey);
+                }
+            }
+        }
+    }
+}
