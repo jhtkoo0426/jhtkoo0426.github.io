@@ -107,16 +107,28 @@
 }
 
 
+// ProjectPageHeader.js
+.project-page-header {
+    font: 22px 'InterBold';
+    color: var(--mono-white);
+}
+
+
 // StyledLink.js
 .styled-link {
     padding: 17px 15px;
     text-decoration: none;
     text-transform: uppercase;
     border-radius: 8px;
-    background-color: var(--mono-dark-grey);
-    font: 13px 'RobotoMono';
-    color: var(--mono-light-grey);
     flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font: 13px 'RobotoMono';
+    background-color: var(--mono-dark-grey);
+    color: var(--mono-light-grey);
+
+    svg { font-size: 11px; }
 
     &:hover {
         background-color: var(--mono-dark-grey2);

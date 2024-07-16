@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 
 const StyledLink = ({ address, showText, children }) => {
@@ -9,6 +11,7 @@ const StyledLink = ({ address, showText, children }) => {
             target="_blank"
             rel="noreferrer">
             {showText}
+            <FontAwesomeIcon icon={faChevronRight} />
         </a>
     )
 }

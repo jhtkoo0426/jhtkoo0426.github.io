@@ -8,7 +8,7 @@ const ProjectPageLayout = ({ projectName, projectType, projectDescription,
     return (
         <section className="project-layout">
             { projectImage && <img className="project-landing-img" src={projectImage} alt={projectName}></img> }
-            { projectVideo && <video className="project-landing-video" src={projectVideo} loop autoPlay></video> }
+            { projectVideo && <video className="project-landing-video" src={projectVideo} loop autoPlay muted /> }
             <div className="title">
                 <p className="name">{projectName}</p>
                 <p className="type">{projectType}</p>
