@@ -12,8 +12,15 @@ import "../css/layout.scss";
 // Framer motion variants
 
 const Layout = ({ pageTitle, children }) => {
+  const isIndexPage = pageTitle === "index";
+
   return (
     <div className='wrapper'>
+      {!isIndexPage &&
+        <nav className='topnav'>
+          <Link to='/'>Back</Link>
+        </nav>
+      }
       <MomentumScroll>
         <main>
           {children}

@@ -8,16 +8,16 @@ import Showcase from '../components/Showcase';
 import "../css/index.scss";
 
 // Media
-import routeFinder from "../images/route-finder-closeup.png";
 import optionsAnalysis from "../images/options-analysis.png";
 import spiderman from "../images/spiderman.jpg";
 import fyp from "../videos/robotic-grasping.mp4";
 import epidemic from "../videos/epidemic-sim.mp4";
+import routeFinder from "../videos/route-finder-demo.mp4";
 
 
 const IndexPage = () => {
   return (
-    <Layout>
+    <Layout pageTitle="index">
       <section className='about'>
         <div className='greet'>
           <AlternatingText interval={2500}>
@@ -39,8 +39,8 @@ const IndexPage = () => {
           <Showcase
             projectName="Route Finder"
             projectDescription="Algorithms & Data Visualization"
-            projectImg={routeFinder}
-            projectLink="route-finder"
+            projectVideo={routeFinder}
+            projectLink="routefinder"
             ></Showcase>
           <Showcase
             projectName="Portfolio"

@@ -1,4 +1,23 @@
 .wrapper {
+    min-height: calc(100vh - 2 * var(--padding-lr));
     padding: var(--padding-lr);
     background-color: var(--mono-black);
+}
+
+.topnav {
+    height: 100px;
+    display: flex;
+    align-items: center;
+
+    a {
+        height: 30px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        padding: 8px 25px;
+        border-radius: 21px;
+        background-color: rgba(255, 255, 255, 0.2);
+        color: var(--mono-white);
+        font: 16px 'Inter';
+    }
 }
