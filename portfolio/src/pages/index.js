@@ -78,5 +78,5 @@ const IndexPage = () => {
 }
 
 
-export const Head = () => <title>Home Page</title>
+export const Head = () => <title>Justin Koo - Software Engineer</title>
 export default IndexPage
