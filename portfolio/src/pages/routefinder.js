@@ -35,22 +35,10 @@ const RouteFinderPage = () => {
                 repoLink={"https://github.com/jhtkoo0426/route-finder"}
                 siteLink={"https://jhtkoo0426.github.io/route-finder/"}>
                 <div>
-                    <ProjectPageSection sectionTitle="Motivation" sectionDescription="Enhancing maps with real-time visualizations">
+                    <ProjectPageSection sectionTitle="Motivation" sectionDescription="Enhancing maps with real-time path-finding visualizations">
                         <p>While map applications such as Google Maps are impressive and efficient, they conceal 
                             the pathfinding process from users. To provide greater accessibility and transparency, 
                             I decided to create my own version that visualizes the path-finding process.</p> 
-                    </ProjectPageSection>
-                    
-                    <StyledSeparator/>
-                    <ProjectPageSection sectionTitle="Core Features">
-                        <p>The application has two main features:</p>
-                        <br></br>
-                        <ProjectFeatureSection
-                            featureDetails={[
-                                {icon: faDatabase, featureName: "Data Processing", featureDescription: "Automatically parses metro map data in .csv format"},
-                                {icon: faEye, featureName: "Real-time Visualization", featureDescription: "Dynamic visualizes the exploration of path-finding algorithms on the metro map"}
-                            ]}
-                        ></ProjectFeatureSection>
                     </ProjectPageSection>
                     
                     <StyledSeparator />
@@ -69,12 +57,11 @@ const RouteFinderPage = () => {
                     </ProjectPageSection>
 
                     <StyledSeparator />
-                    <ProjectPageSection sectionTitle="Pathfinding" sectionDescription="Bringing the idea to life">
-                        <p>With the underlying data structure prepared, users can search for two stations to visualize the 
-                            shortest distance path and select a specific pathfinding algorithm (Dijkstra, A*). 
-                            While my algorithms may not be as sophisticated as Google's, they get the job done.</p>
+                    <ProjectPageSection sectionTitle="Bringing the idea to life" sectionDescription="Pathfinding states">
+                        <p>With the underlying data structure prepared, users can search for a pair of stations
+                             to visualize the shortest distance path and select a specific pathfinding algorithm.</p>
                         <br></br>
-                        <p>Each connection on the map is represented with three colors:</p>
+                        <p>Each connection on the map is represented with one of three color states:</p>
                         <ProjectImageCarousel
                             carouselItems={[
                                 { img: routeFinderConnectionUnvisited, desc: "Lightest: Unexplored connection" },
@@ -86,6 +73,8 @@ const RouteFinderPage = () => {
                         <p>The system explores the entire map in real-time based on the selected algorithm, 
                             visualizing the process. Once the shortest distance route is found, the selected 
                             route is displayed in solid color.</p>
+                        <br></br>
+                        <img src={routeFinderFullscreen}></img>
                     </ProjectPageSection>
 
                     <StyledSeparator />

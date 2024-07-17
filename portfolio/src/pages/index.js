@@ -43,9 +43,9 @@ const IndexPage = () => {
             projectLink="routefinder"
             ></Showcase>
           <Showcase
-            projectName="Portfolio"
-            projectDescription="WebDev (React)"
-            projectImg={spiderman}
+            projectName="Robust Robotic Grasping"
+            projectDescription="Machine Learning & Robotics"
+            projectVideo={fyp}
             ></Showcase>
         </div>
         <div>
@@ -55,15 +55,15 @@ const IndexPage = () => {
             projectVideo={epidemic}
             ></Showcase>
           <Showcase
-            projectName="Robust Robotic Grasping"
-            projectDescription="Machine Learning & Robotics"
-            projectVideo={fyp}
+            projectName="Lumin"
+            projectDescription="Quantitative Finance & System Design"
             ></Showcase>
         </div>
         <div>
           <Showcase
-            projectName="Lumin"
-            projectDescription="Quantitative Finance & System Design"
+            projectName="Portfolio"
+            projectDescription="WebDev (React)"
+            projectImg={spiderman}
             ></Showcase>
           <Showcase
             projectName="Options Analysis"
