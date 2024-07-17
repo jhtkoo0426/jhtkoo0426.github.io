@@ -122,18 +122,23 @@
     border-radius: 8px;
     padding: 10px;
     background-color: var(--mono-dark-grey);
-    font: 14px 'Inter';
-    color: var(--mono-light-grey);
 
-    svg { margin-right: 10px; }
-
-    p {
+    .feature-title {
         display: flex;
         align-items: center;
+        margin-bottom: 2px;
+
+        svg { margin-right: 10px; }
 
         .feature-name {
-            font: 13px 'ManropeBold';
+            letter-spacing: 1px;
+            font: 14px 'Manrope';
         }
+    }
+
+    .details {
+        font: 14px 'Inter';
+        color: var(--mono-light-grey);
     }
 }
 

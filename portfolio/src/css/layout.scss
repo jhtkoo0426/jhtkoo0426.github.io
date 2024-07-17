@@ -1,5 +1,6 @@
 // General styling
 p, ul, li {
+    margin: 0;
     font: 15px 'Inter';
     line-height: 22px;
     color: var(--mono-white);
@@ -61,8 +62,4 @@ li {
         &::before { transform: translate(-50%, -50%) rotate(45deg); }
         &::after { transform: translate(-50%, -50%) rotate(-45deg); }
     }
-}
-
-.scroll-container {
-    margin-top: 100px;
 }

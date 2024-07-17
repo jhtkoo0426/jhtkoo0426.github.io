@@ -1,9 +1,6 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
 import { motion } from "framer-motion";
-import MomentumScroll from './MomentumScroll';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
 // Styling
 import "../css/app.scss";
@@ -23,12 +20,9 @@ const Layout = ({ pageTitle, children }) => {
         </nav>
       }
       <div className='wrapper'>
-        
-        <MomentumScroll>
-          <main>
-            {children}
-          </main>
-        </MomentumScroll>
+        <main>
+          {children}
+        </main>
       </div>
     </>
   )

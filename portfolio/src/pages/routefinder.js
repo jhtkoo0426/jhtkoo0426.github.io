@@ -3,7 +3,7 @@ import Layout from "../components/layout";
 import ProjectPageLayout from "../components/project_components/ProjectPageLayout";
 
 // Styling
-import { faEye, faMap } from "@fortawesome/free-solid-svg-icons";
+import { faDatabase, faEye } from "@fortawesome/free-solid-svg-icons";
 
 // Media
 import routeFinderFullscreen from "../images/route-finder-fullscreen.png";
@@ -44,28 +44,30 @@ const RouteFinderPage = () => {
                         <br></br>
                         <ProjectFeatureSection
                             featureDetails={[
-                                {icon: faEye, featureName: "Data Processing", featureDescription: "Automatic parsing of metro map data (in .csv format) such as stations, interchanges, connections and railway lines."},
-                                {icon: faMap, featureName: "Real-time Visualization", featureDescription: "Dynamic visualization of the exploration of various path-finding algorithms on metro maps"}
+                                {icon: faDatabase, featureName: "Data Processing", featureDescription: "Automatically parses metro map data in .csv format"},
+                                {icon: faEye, featureName: "Real-time Visualization", featureDescription: "Dynamic visualizes the exploration of path-finding algorithms on the metro map"}
                             ]}
                         ></ProjectFeatureSection>
                     </ProjectPageSection>
                     
                     <StyledSeparator />
-                    <ProjectPageSection sectionTitle="How Does it Work?">
-                        <p>CSV data is first processed with parsers and consolidated in a central location 
-                            (MetroMapAssetsManager.js). The assets (stations, connections, available lines) are 
-                            loaded into three components:</p>
+                    <ProjectPageSection sectionTitle="How does it work?" sectionDescription="Building a robust system">
+                        <p>To create a complete metro map, users must provide three .csv files with station names, 
+                            connections, and metro line names. These files are processed and consolidated into a 
+                            central data provider. This data can then be queried for:</p>
                         <br></br>
                         <ul>
-                            <li>A canvas for displaying the metro map.</li>
-                            <li>A search service where pathfinding algorithms operate, using adjacency lists 
-                                generated from the loaded stations and connections.</li>
-                            <li>A path generator, which converts the generated paths into a well-formatted 
-                                structure that includes all necessary transits, similar to Google Maps.</li>
+                            <li>populating the metro map with stations and connections.</li>
+                            <li>finding shortest paths using generated adjacency lists.</li>
+                            <li>generating visualizations for optimal routes and necessary transits, similar to 
+                                Google Maps.</li>
                         </ul>
-                        <img src={routeFinderUML}></img>
                         <br></br>
-                        <p>With these services ready, users can search for two stations to visualize the 
+                    </ProjectPageSection>
+
+                    <StyledSeparator />
+                    <ProjectPageSection sectionTitle="Pathfinding" sectionDescription="Bringing the idea to life">
+                        <p>With the underlying data structure prepared, users can search for two stations to visualize the 
                             shortest distance path and select a specific pathfinding algorithm (Dijkstra, A*). 
                             While my algorithms may not be as sophisticated as Google's, they get the job done.</p>
                         <br></br>
