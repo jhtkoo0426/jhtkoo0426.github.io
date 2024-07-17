@@ -8,12 +8,15 @@ import { faDatabase, faEye } from "@fortawesome/free-solid-svg-icons";
 // Media
 import routeFinderFullscreen from "../images/route-finder-fullscreen.png";
 import routeFinderUML from "../images/route-finder-uml.png";
+import routeFinderConnectionUnvisited from "../images/route-finder-connection-unvisited.png";
+import routeFinderConnectionVisited from "../images/route-finder-connection-visited.png";
+import routeFinderConnectionSelected from "../images/route-finder-connection-selected.png";
 import routeFinderVideo from "../videos/route-finder-demo.mp4";
 import StyledSeparator from "../components/StyledSeparator";
 import ProjectPageSection from "../components/project_components/ProjectPageSection";
 import StyledLink from "../components/StyledLink";
-import ProjectFeatureDescription from "../components/project_components/ProjectFeatureDescription";
 import ProjectFeatureSection from "../components/project_components/ProjectFeatureSection";
+import ProjectImageCarousel from "../components/project_components/ProjectImageCarousel";
 
 
 const RouteFinderPage = () => {
@@ -32,7 +35,7 @@ const RouteFinderPage = () => {
                 repoLink={"https://github.com/jhtkoo0426/route-finder"}
                 siteLink={"https://jhtkoo0426.github.io/route-finder/"}>
                 <div>
-                    <ProjectPageSection sectionTitle="Motivation" sectionDescription="Visualize path-finding processes">
+                    <ProjectPageSection sectionTitle="Motivation" sectionDescription="Enhancing maps with real-time visualizations">
                         <p>While map applications such as Google Maps are impressive and efficient, they conceal 
                             the pathfinding process from users. To provide greater accessibility and transparency, 
                             I decided to create my own version that visualizes the path-finding process.</p> 
@@ -72,11 +75,13 @@ const RouteFinderPage = () => {
                             While my algorithms may not be as sophisticated as Google's, they get the job done.</p>
                         <br></br>
                         <p>Each connection on the map is represented with three colors:</p>
-                        <ul>
-                            <li>Lightest: Unexplored connection</li>
-                            <li>Darker: Explored connection</li>
-                            <li>Solid color (corresponding to the line between the stations): Selected route</li>
-                        </ul>
+                        <ProjectImageCarousel
+                            carouselItems={[
+                                { img: routeFinderConnectionUnvisited, desc: "Lightest: Unexplored connection" },
+                                { img: routeFinderConnectionVisited, desc: "Darker: Explored connection" },
+                                { img: routeFinderConnectionSelected, desc: "Solid: Selected connection" }
+                            ]}
+                        />
                         <br></br>
                         <p>The system explores the entire map in real-time based on the selected algorithm, 
                             visualizing the process. Once the shortest distance route is found, the selected 

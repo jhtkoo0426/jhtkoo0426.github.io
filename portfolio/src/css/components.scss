@@ -73,7 +73,7 @@
         .desc {
             font: 15px 'Manrope';
             line-height: 22px;
-            color: var(--mono-white);
+            color: var(--mono-light-grey);
         }
 
         .details {
@@ -164,9 +164,25 @@
     .sec-desc {
         font: 26px 'InterBold';
         padding-bottom: 10px;
+        color: var(--mono-white);
     }
 
     img { width: 100%; }
+}
+
+
+// ProjectImageCarousel.js
+.carousel {
+    padding-top: 5px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+
+    img { border-radius: 5px; }
+    p {
+        font: 14px 'RobotoMono';
+        color: var(--mono-light-grey);
+    }
 }
 
 
