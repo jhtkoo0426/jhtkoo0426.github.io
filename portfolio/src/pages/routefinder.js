@@ -2,12 +2,8 @@ import React from "react";
 import Layout from "../components/layout";
 import ProjectPageLayout from "../components/project_components/ProjectPageLayout";
 
-// Styling
-import { faDatabase, faEye } from "@fortawesome/free-solid-svg-icons";
-
 // Media
 import routeFinderFullscreen from "../images/route-finder-fullscreen.png";
-import routeFinderUML from "../images/route-finder-uml.png";
 import routeFinderConnectionUnvisited from "../images/route-finder-connection-unvisited.png";
 import routeFinderConnectionVisited from "../images/route-finder-connection-visited.png";
 import routeFinderConnectionSelected from "../images/route-finder-connection-selected.png";
@@ -15,7 +11,6 @@ import routeFinderVideo from "../videos/route-finder-demo.mp4";
 import StyledSeparator from "../components/StyledSeparator";
 import ProjectPageSection from "../components/project_components/ProjectPageSection";
 import StyledLink from "../components/StyledLink";
-import ProjectFeatureSection from "../components/project_components/ProjectFeatureSection";
 import ProjectImageCarousel from "../components/project_components/ProjectImageCarousel";
 
 
@@ -32,8 +27,8 @@ const RouteFinderPage = () => {
                 duration="Jan 2024 - Feb 2024"
                 tools={["React.js"]}
                 disciplines={["Web Development", "UI/UX Design"]}
-                repoLink={"https://github.com/jhtkoo0426/route-finder"}
-                siteLink={"https://jhtkoo0426.github.io/route-finder/"}>
+                repoLink="https://github.com/jhtkoo0426/route-finder"
+                siteLink="https://jhtkoo0426.github.io/route-finder/">
                 <div>
                     <ProjectPageSection sectionTitle="Motivation" sectionDescription="Enhancing maps with real-time path-finding visualizations">
                         <p>While map applications such as Google Maps are impressive and efficient, they conceal 

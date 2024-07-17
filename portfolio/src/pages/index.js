@@ -53,6 +53,7 @@ const IndexPage = () => {
             projectName="Epidemic Simulation"
             projectDescription="Simulations & WebDev (React)"
             projectVideo={epidemic}
+            projectLink="epidemic"
             ></Showcase>
           <Showcase
             projectName="Lumin"
