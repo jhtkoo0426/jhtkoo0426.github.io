@@ -13,6 +13,7 @@
     --mono-dark-grey2: #333333;
     --mono-turqoise: #26d190;
     --padding-lr: 48px;
+    --padding-tb: 48px;
     --topnav-zindex: 1000;
 }
 
@@ -143,3 +144,9 @@
     src: url("../fonts/BaiZhouZhuanShu.ttf");
 }
 
+
+@media screen and (min-width: 1200px) {
+    :root {
+        --padding-lr: 25vw;
+    }
+}

@@ -46,3 +46,24 @@
     grid-gap: 15px;
     background-color: var(--mono-black);
 }
+
+
+@media screen and (max-width: 768px) {
+    .about {
+        .greet-text {
+            height: 3.5rem;
+            padding-bottom: 5px;
+            font: 2.5rem 'Inter';
+
+            &.cn, &.jp { font-size: 2rem; }
+        }
+        
+        .greet > .desc {
+            width: 100%;
+        }
+    }
+
+    .work {
+        grid-template-columns: 1fr;
+    }
+}

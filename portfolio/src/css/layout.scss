@@ -13,8 +13,8 @@ li {
 
 // Specific layout styling
 .wrapper {
-    min-height: calc(100vh - 2 * var(--padding-lr));
-    padding: var(--padding-lr);
+    min-height: calc(100vh - 2 * var(--padding-tb));
+    padding: var(--padding-tb) var(--padding-lr);
     background-color: var(--mono-black);
 }
 
