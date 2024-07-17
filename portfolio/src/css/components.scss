@@ -92,6 +92,8 @@
                 font: 13px 'Inter';
                 line-height: 19px;
                 color: var(--mono-white);
+
+                span { display: block; }
             }
         }
 
@@ -107,10 +109,59 @@
 }
 
 
-// ProjectPageHeader.js
-.project-page-header {
-    font: 22px 'InterBold';
-    color: var(--mono-white);
+// ProjectFeatureSection.js
+.project-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+
+// ProjectFeatureDescription.js
+.feature-description {
+    border-radius: 8px;
+    padding: 10px;
+    background-color: var(--mono-dark-grey);
+    font: 14px 'Inter';
+    color: var(--mono-light-grey);
+
+    svg { margin-right: 10px; }
+
+    p {
+        display: flex;
+        align-items: center;
+
+        .feature-name {
+            font: 13px 'ManropeBold';
+        }
+    }
+}
+
+
+// ProjectPageSection.js
+.project-section-wrapper {
+    .project-section-header {
+        padding-bottom: 20px;
+        font: 12px 'Inter';
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--mono-light-grey);
+
+        span {
+            &.dash {
+                height: 1px;
+                width: 50px;
+                background-color: var(--mono-light-grey);
+            }
+        }
+    }
+
+    .sec-desc {
+        font: 26px 'InterBold';
+        padding-bottom: 10px;
+    }
+
+    img { width: 100%; }
 }
 
 

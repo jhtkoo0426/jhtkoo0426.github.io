@@ -7,7 +7,7 @@
 
 :root {
     --mono-black: #101010;
-    --mono-white: #fff;
+    --mono-white: #ebebeb;
     --mono-light-grey: #a0a0a0;
     --mono-dark-grey: #1D1D1D;
     --mono-dark-grey2: #333333;
@@ -50,6 +50,11 @@
 @font-face {
     font-family: 'Manrope';
     src: url("../fonts/Manrope/static/Manrope-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'ManropeBold';
+    src: url("../fonts/Manrope/static/Manrope-Bold.ttf");
 }
 
 @font-face {

@@ -1,10 +1,10 @@
 import React from "react"
-import StyledLink from "./StyledLink"
-import StyledSeparator from "./StyledSeparator"
+import StyledLink from "../StyledLink"
+import StyledSeparator from "../StyledSeparator"
 
 
-const ProjectPageLayout = ({ projectName, projectType, projectDescription,
-    role, duration, tools, repoLink, siteLink, projectImage, projectVideo, children }) => {
+const ProjectPageLayout = ({ projectName, projectType, projectDescription, role, 
+    duration, tools, disciplines, repoLink, siteLink, projectImage, projectVideo, children }) => {
     return (
         <section className="project-layout">
             { projectImage && <img className="project-landing-img" src={projectImage} alt={projectName}></img> }
@@ -37,6 +37,17 @@ const ProjectPageLayout = ({ projectName, projectType, projectDescription,
                             <p className="col-name">Tools</p>
                             <p className="col-content">
                                 { tools.map((element, index) => (
+                                    <span key={index}>{element}</span>
+                                ))}
+                            </p>
+                        </div>
+                    }
+                    {
+                        disciplines &&
+                        <div className="disciplines">
+                            <p className="col-name">Disciplines</p>
+                            <p className="col-content">
+                                { disciplines.map((element, index) => (
                                     <span key={index}>{element}</span>
                                 ))}
                             </p>
