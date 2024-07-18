@@ -42,13 +42,13 @@ const RepoProvider = ({ children }) => {
       const lastUpdateDate = new Date(commitData.commit.author.date).toISOString().split('T')[0];
       setLastUpdateDate(lastUpdateDate);
 
-      const contentsResponse = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/portfolio?ref=${branch}`, {
+      const contentsResponse = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents?ref=${branch}`, {
         method: 'GET',
         headers: headers,
-      });
+      });      
 
       if (!contentsResponse.ok) {
-        throw new Error(`Error fetching /portfolio directory contents: ${contentsResponse.statusText}`);
+        throw new Error(`Error fetching directory contents: ${contentsResponse.statusText}`);
       }
 
       const contentsData = await contentsResponse.json();
