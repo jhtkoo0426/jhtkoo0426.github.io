@@ -14,8 +14,11 @@ li {
 // Specific layout styling
 .wrapper {
     min-height: calc(100vh - 2 * var(--padding-tb));
-    padding: var(--padding-tb) var(--padding-lr);
     background-color: var(--mono-black);
+
+    .wrapper-content {
+        padding: var(--padding-tb) var(--padding-lr);
+    }
 }
 
 .topnav {
@@ -61,5 +64,83 @@ li {
         &:hover::before, &:hover::after { background-color: var(--mono-turqoise); }
         &::before { transform: translate(-50%, -50%) rotate(45deg); }
         &::after { transform: translate(-50%, -50%) rotate(-45deg); }
+    }
+}
+
+
+.botnav {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: calc(var(--padding-tb) * 0.5) var(--padding-lr);
+    background-color: var(--mono-black);
+    color: var(--mono-white);
+
+    .version-status {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        font: 13px 'RobotoMono';
+
+        .version {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            height: 24px;
+            padding: 0 8px;
+            border: 1px solid var(--mono-turqoise);
+            border-radius: 12px;
+            color: var(--mono-turqoise);
+        }
+
+        .last-update {
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            color: var(--mono-light-grey);
+        }
+    }
+
+    .socials {
+        display: flex;
+        flex-direction: column;
+        
+        .social-link {
+            padding: 5px 0;
+            font: 13px 'Inter';
+            text-decoration: none;
+            color: var(--mono-white);
+
+            span { margin-right: 10px; }
+
+            svg {
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+    .email {
+        p {
+            font: 14px 'Inter';
+            color: var(--mono-white);
+
+            &:nth-child(1) { padding-top: 10px; }
+            &:nth-child(2) { padding-top: 5px; }
+        }
+    }
+}
+
+
+.footer {
+    
+}
+
+
+@media screen and (max-width: 768px) {
+    .botnav {
+        display: block;
+    }
+
+    .version-status {
+        padding-bottom: 10px;
     }
 }
