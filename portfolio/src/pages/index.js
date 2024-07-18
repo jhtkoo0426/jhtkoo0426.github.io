@@ -1,6 +1,5 @@
-import * as React from 'react'
-import { Link } from 'gatsby'
-import Layout from '../components/layout'
+import * as React from 'react';
+import Layout from '../components/layout';
 import AlternatingText from '../components/AlternatingText';
 import Showcase from '../components/Showcase';
 
@@ -14,8 +13,11 @@ import fyp from "../videos/robotic-grasping.mp4";
 import epidemic from "../videos/epidemic-sim.mp4";
 import routeFinder from "../videos/route-finder-demo.mp4";
 
+import { RepoContext } from '../context/RepoProvider';
 
-const IndexPage = () => {
+
+
+const IndexPage = ({ Component, pageProps }) => {
   return (
     <Layout pageTitle="index">
       <section className='about'>
@@ -46,6 +48,7 @@ const IndexPage = () => {
             projectName="Robust Robotic Grasping"
             projectDescription="Machine Learning & Robotics"
             projectVideo={fyp}
+            projectLink="/"
             ></Showcase>
         </div>
         <div>
@@ -58,6 +61,7 @@ const IndexPage = () => {
           <Showcase
             projectName="Lumin"
             projectDescription="Quantitative Finance & System Design"
+            projectLink="/"
             ></Showcase>
         </div>
         <div>
@@ -65,11 +69,13 @@ const IndexPage = () => {
             projectName="Portfolio"
             projectDescription="WebDev (React)"
             projectImg={spiderman}
+            projectLink="/"
             ></Showcase>
           <Showcase
             projectName="Options Analysis"
             projectDescription="Quantitative Finance"
             projectImg={optionsAnalysis}
+            projectLink="/"
           ></Showcase>
         </div>
       </section>

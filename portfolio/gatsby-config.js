@@ -7,6 +7,9 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
+
+require('dotenv').config();
+
 module.exports = {
   pathPrefix: "/",
   siteMetadata: {
@@ -37,6 +40,6 @@ module.exports = {
         icon: `src/images/page-icon.png`,
       },
     },
-    `gatsby-plugin-sass`
+    `gatsby-plugin-sass`,
   ],
 }
