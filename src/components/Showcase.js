@@ -1,3 +1,5 @@
+// Displays a project with an image or video, name, and description. 
+// It serves as a link to a detailed project page.
 import React from "react";
 import { Link } from "gatsby";
 

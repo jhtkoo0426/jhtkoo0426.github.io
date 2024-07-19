@@ -1,4 +1,6 @@
 import React from "react";
+
+// Components
 import Layout from "../components/layout";
 import ProjectPageLayout from "../components/project_components/ProjectPageLayout";
 import ProjectPageSection from "../components/project_components/ProjectPageSection";
@@ -8,7 +10,7 @@ import epidemicVideo from "../videos/epidemic-sim.mp4";
 import StyledSeparator from "../components/StyledSeparator";
 
 
-const EpidemicPage = ({}) => {
+const EpidemicPage = () => {
     return (
         <Layout pageTitle="epidemic simulation">
             <ProjectPageLayout

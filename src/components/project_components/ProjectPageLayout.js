@@ -1,4 +1,9 @@
+// Display detailed information about a project, including its name, type, description, role, 
+// duration, tools, disciplines, and associated links. It can also display an image or video 
+// related to the project.
 import React from "react"
+
+// Components
 import StyledLink from "../StyledLink"
 import StyledSeparator from "../StyledSeparator"
 

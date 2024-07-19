@@ -1,5 +1,9 @@
+// A wrapper for project feature descriptions.
 import React from "react";
+
+// Components
 import ProjectFeatureDescription from "./ProjectFeatureDescription";
+
 
 const ProjectFeatureSection = ({ featureDetails }) => {
     return (

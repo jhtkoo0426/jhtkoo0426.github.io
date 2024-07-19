@@ -1,5 +1,8 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// Formats and displays a feature description and additional details.
 import React from "react";
+
+// Assets
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
 const ProjectFeatureDescription = ({ iconName, featureName, children }) => {

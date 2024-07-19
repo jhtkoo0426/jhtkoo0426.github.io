@@ -11,7 +11,7 @@ import routeFinderVideo from "../videos/route-finder-demo.mp4";
 import StyledSeparator from "../components/StyledSeparator";
 import ProjectPageSection from "../components/project_components/ProjectPageSection";
 import StyledLink from "../components/StyledLink";
-import ProjectImageCarousel from "../components/project_components/ProjectImageCarousel";
+import ProjectImageCarousel from "../components/project_components/ProjectImageGallery";
 
 
 const RouteFinderPage = () => {
@@ -69,7 +69,7 @@ const RouteFinderPage = () => {
                             visualizing the process. Once the shortest distance route is found, the selected 
                             route is displayed in solid color.</p>
                         <br></br>
-                        <img src={routeFinderFullscreen}></img>
+                        <img src={routeFinderFullscreen} alt="route-finder-fullscreen"></img>
                     </ProjectPageSection>
 
                     <StyledSeparator />

@@ -1,3 +1,4 @@
+// Cycles through and displays its children elements one at a time at a specified interval.
 import React, { useState, useEffect, Children } from 'react';
 
 

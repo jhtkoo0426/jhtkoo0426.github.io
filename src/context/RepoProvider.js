@@ -1,6 +1,12 @@
+// A React context provider component that fetches data from a GitHub repository 
+// and provides it to its children components via the RepoContext. The data 
+// includes the last update date of the repository and the project's version 
+// from the package.json file.
 import React, { createContext, useState, useEffect } from 'react';
 
+
 const RepoContext = createContext();
+
 
 const RepoProvider = ({ children }) => {
   const [lastUpdateDate, setLastUpdateDate] = useState('');

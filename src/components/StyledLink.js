@@ -1,3 +1,5 @@
+// Renders a styled anchor (<a>) element, designed to be used for 
+// external links with a consistent appearance.
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";

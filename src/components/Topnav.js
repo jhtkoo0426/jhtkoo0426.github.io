@@ -1,3 +1,4 @@
+// Renders a top navigation bar that is visible on all non-index pages.
 import React from "react";
 import { Link } from "gatsby";
 

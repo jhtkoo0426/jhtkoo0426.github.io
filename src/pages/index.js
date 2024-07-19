@@ -13,9 +13,6 @@ import fyp from "../videos/robotic-grasping.mp4";
 import epidemic from "../videos/epidemic-sim.mp4";
 import routeFinder from "../videos/route-finder-demo.mp4";
 
-import { RepoContext } from '../context/RepoProvider';
-
-
 
 const IndexPage = ({ Component, pageProps }) => {
   return (

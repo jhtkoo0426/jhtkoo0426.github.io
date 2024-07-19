@@ -1,3 +1,4 @@
+// Displays a carousel of images with their descriptions.
 import React from "react";
 
 

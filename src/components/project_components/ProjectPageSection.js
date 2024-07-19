@@ -1,3 +1,5 @@
+// Display a section of a project page. Each section includes a title, an 
+// optional description, and additional content.
 import React from "react";
 
 

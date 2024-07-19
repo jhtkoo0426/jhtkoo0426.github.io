@@ -1,13 +1,20 @@
+// Provides a common layout structure for a website. It includes navigation, 
+// main content area, and footer with version and update information.
 import React, { useContext, useEffect } from 'react';
+
+// Assets
 import { Link } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
+
+// Contenxt providers
 import { RepoContext } from '../context/RepoProvider';
 
 // Styling
 import "../css/app.scss";
 import "../css/components.scss";
 import "../css/layout.scss";
+
 
 const Layout = ({ pageTitle, children }) => {
   useEffect(() => {

@@ -1,3 +1,4 @@
+// A styled horizontal rule element.
 import React from "react";
 
 
