@@ -22,13 +22,13 @@ const IndexPage = ({ Component, pageProps }) => {
           <AlternatingText interval={2500}>
             <p className='en greet-text'>Hi,</p>
             <p className='cn greet-text'>你好,</p>
-            <p className='es greet-text'>Hola,</p>
+            <p className='es greet-text'>Holá,</p>
             <p className='jp greet-text'>こんにちは,</p>
           </AlternatingText>
           <p className='greet-text'>this is Justin.</p>
           <p className='intro desc'>Justin is a software engineer who loves bringing ideas to life 
             through technology. Previously, he developed analytical tools for the NHS, and is
-            currently a freelance data engineer specializing in machine learning.</p>
+            currently a Cloud Consultant at Go Reply.</p>
           <br></br>
           <p className='desc'>He also has a thing for photography and kewpie mayonnaise.</p>
         </div>
