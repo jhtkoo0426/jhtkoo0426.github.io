@@ -27,6 +27,11 @@ Before starting your development, ensure that there exists a `portfolio/src` dir
     ```
 
 ## Version Control
-When you make a patch or version update, you can update the `version` attribute in the `package.json` file. This change will only be made visible from the website after you:
-1. Make a commit to the remote repository; AND 
-2. Deploy the updated version.
+When you make a patch or version update, ensrue you carry out the following steps:
+1. Make a commit to the remote repository;
+2. Update the version tag for the repo:
+   1. `git tag v<version>`
+   2. `git push origin v<version>`
+   3. If you aren't sure what the current version tag is, run `git tag -l`
+3. Deploy the updated version.
+Correct changes will only be made visible from the website after you complete these steps.

@@ -11,6 +11,7 @@ const RepoContext = createContext();
 const RepoProvider = ({ children }) => {
   const [lastUpdateDate, setLastUpdateDate] = useState('');
   const [projectVersion, setProjectVersion] = useState('');
+  const [latestTag, setLatestTag] = useState('');
 
   const fetchRepoData = async (owner, repo, branch) => {
     const accessToken = process.env.GITHUB_PERSONAL_ACCESS_TOKEN;
@@ -23,6 +24,7 @@ const RepoProvider = ({ children }) => {
     }
 
     try {
+      // Fetch branch data for commit history
       const branchResponse = await fetch(`https://api.github.com/repos/${owner}/${repo}/branches/${branch}`, {
         method: 'GET',
         headers: headers,
@@ -35,6 +37,7 @@ const RepoProvider = ({ children }) => {
       const branchData = await branchResponse.json();
       const commitSha = branchData.commit.sha;
 
+      // Fetch last commit data
       const commitResponse = await fetch(`https://api.github.com/repos/${owner}/${repo}/commits/${commitSha}`, {
         method: 'GET',
         headers: headers,
@@ -48,35 +51,20 @@ const RepoProvider = ({ children }) => {
       const lastUpdateDate = new Date(commitData.commit.author.date).toISOString().split('T')[0];
       setLastUpdateDate(lastUpdateDate);
 
-      const contentsResponse = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents?ref=${branch}`, {
+      // Fetch project tag
+      const tagsResponse = await fetch(`https://api.github.com/repos/${owner}/${repo}/tags`, {
         method: 'GET',
         headers: headers,
-      });      
+      });
 
-      if (!contentsResponse.ok) {
-        throw new Error(`Error fetching directory contents: ${contentsResponse.statusText}`);
+      if (!tagsResponse.ok) {
+        throw new Error(`Error fetching tags: ${tagsResponse.statusText}`);
       }
 
-      const contentsData = await contentsResponse.json();
-      const packageJsonFile = contentsData.find(file => file.name === 'package.json');
+      const tagsData = await tagsResponse.json();
+      const latestTag = tagsData[0]?.name;
+      setLatestTag(latestTag);
 
-      if (packageJsonFile) {
-        const packageJsonUrl = packageJsonFile.download_url;
-        const packageJsonResponse = await fetch(packageJsonUrl, {
-          method: 'GET',
-          headers: headers,
-        });
-
-        if (!packageJsonResponse.ok) {
-          throw new Error(`Error fetching package.json: ${packageJsonResponse.statusText}`);
-        }
-
-        const packageJsonData = await packageJsonResponse.json();
-        const projectVersion = packageJsonData.version;
-        setProjectVersion(projectVersion);
-      } else {
-        setProjectVersion('Version not found');
-      }
     } catch (error) {
       console.error(`Error: ${error.message}`);
     }
@@ -90,7 +78,7 @@ const RepoProvider = ({ children }) => {
   }, []);  
 
   return (
-    <RepoContext.Provider value={{ lastUpdateDate, projectVersion }}>
+    <RepoContext.Provider value={{ lastUpdateDate, projectVersion, latestTag }}>
       {children}
     </RepoContext.Provider>
   );

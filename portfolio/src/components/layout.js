@@ -23,8 +23,9 @@ const Layout = ({ pageTitle, children }) => {
   
   const context = useContext(RepoContext);
   // console.log(context)
-  const lastUpdateDate = context?.lastUpdateDate || 'Loading...';
-  const projectVersion = context?.projectVersion || 'Loading...';
+  const lastUpdateDate = context?.lastUpdateDate || '';
+  const projectVersion = context?.projectVersion || '';
+  const latestTag      = context?.latestTag || '';
   const isIndexPage = pageTitle === "index";
 
   return (
@@ -42,7 +43,7 @@ const Layout = ({ pageTitle, children }) => {
         <nav className="botnav">
           <div className='version-status'>
             <span className='version'>
-              {projectVersion ? (projectVersion === "Version not found" ? projectVersion : "v" + projectVersion ) : 'Loading...'}
+              {latestTag }
             </span>
             <span className='last-update'>
               Last Updated {lastUpdateDate ? lastUpdateDate : 'Loading...'}
