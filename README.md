@@ -35,3 +35,8 @@ When you make a patch or version update, ensrue you carry out the following step
    3. If you aren't sure what the current version tag is, run `git tag -l`
 3. Deploy the updated version.
 Correct changes will only be made visible from the website after you complete these steps.
+
+## Deployment
+```
+npm run deploy
+```

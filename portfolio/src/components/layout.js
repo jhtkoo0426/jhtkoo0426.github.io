@@ -22,9 +22,7 @@ const Layout = ({ pageTitle, children }) => {
   }, []);
   
   const context = useContext(RepoContext);
-  // console.log(context)
   const lastUpdateDate = context?.lastUpdateDate || '';
-  const projectVersion = context?.projectVersion || '';
   const latestTag      = context?.latestTag || '';
   const isIndexPage = pageTitle === "index";
 
@@ -68,5 +66,6 @@ const Layout = ({ pageTitle, children }) => {
     </>
   );
 };
+
 
 export default Layout;
